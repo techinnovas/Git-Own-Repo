@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T09:34:23.509083" rpa="false" schemaversion="5">
+<suite id="s1" name="TestBookmodulesortby" source="E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\TestCase\TestBookmodulesortby.robot">
+<test id="s1-t1" name="To verify sorting functionality" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:34:23.837768" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T09:34:23.837768" elapsed="7.312675"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:34:31.150443" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T09:34:31.150443" elapsed="3.182951"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T09:34:34.333394" elapsed="0.004675"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:34:23.837768" elapsed="10.500301"/>
+</kw>
+<kw name="To verify sorting by selecting &quot;A-Z&quot; option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:34:34.340004" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:34:34.340004" elapsed="0.965685"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:34:34.339499" elapsed="0.966190"/>
+</kw>
+<kw name="click on sortbyoption" owner="bookmoduleresource">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:34:35.306712" level="INFO">Selecting options from selection list 'id:products-orderby' by index 1.</msg>
+<arg>${position_l}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-05-27T09:34:35.306712" elapsed="0.630454"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:34:35.306712" elapsed="0.630454"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:34:34.338069" elapsed="1.599097"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T09:34:35.939211" elapsed="3.106623"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:34:35.938188" elapsed="3.107646"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:34:23.837768" elapsed="15.208066"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-27T09:34:23.509083" elapsed="15.536751"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestBookmodulesortby">TestBookmodulesortby</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

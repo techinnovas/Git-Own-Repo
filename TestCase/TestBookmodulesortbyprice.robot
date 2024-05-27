@@ -21,3 +21,6 @@ To sort the product by low to high price option
 
     #To select sortbyprice option
     bookmoduleresource.click on sortbypricelowtohighoption
+
+    #Assert sortby price
+    bookmoduleresource.Asserting low to high option

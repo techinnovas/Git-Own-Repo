@@ -22,12 +22,16 @@ ${actualprice_l}    xpath://span[@class="price actual-price"]
 ${removefilter_l}    xpath://a[text()="Remove Filter"]
 ${assertremove_l}    xpath:(//div/strong)[4]
 ${continueshoppint_l}    xpath://input[@class="button-2 continue-shopping-button"]
-${verifyalert_l}    xpath://p[@class="content"]
+${verifyalert_l}    xpath://div/p
 ${productitle_l}    xpath://h2[@class="product-title"]/a
 ${verify_shopping}    xpath://div[@class="page-title"]/h1
 ${asserting_product}    xpath://div/h1
 ${recentlyviewproduct}  xpath:(//a[text()="Computing and Internet"])[2]
 ${lowtohigh}    xpath:(//div[@class="prices"]/span)[2]
+${tableid}    xpath:(//tbody)[1]
+${removeproduct}    xpath:(//td/input)[1]
+${assertremove}    xpath://div[@class="page-body"]/div
+${clickupdate}    xpath:(//div[@class="common-buttons"]/input)[1]
 
 
 *** Keywords ***
@@ -80,7 +84,8 @@ verify for showing product list
 
 #verify product added
 verify product added in shopping cart
-    Element Text Should Be    ${verifyalert_l}    ${EMPTY}  
+    Wait Until Element Contains    ${verifyalert_l}    ${None}
+    Element Text Should Be    ${verifyalert_l}    ${None}  
 
 Verify Sorting Functionality
     ${product_elements}=    Get WebElements    ${productitle_l}
@@ -103,6 +108,7 @@ Count Products and Verify Display Limit
     ${product_count}=    Get Element Count    ${productitle_l}
     Should Be True    ${product_count} <= 4
 
+#Assert Filter price option over 50
 Assert Filter Price Option Over 50
     Wait Until Page Contains Element    ${productitle_l}    10s    # Wait for products to be displayed with a timeout of 10 seconds
     @{product_elements}=    Get WebElements    ${actualprice_l}   # Get all product elements
@@ -130,5 +136,16 @@ Asserting recently view page
 #Asserting low to high option
 Asserting low to high option
     Element Text Should Be    ${lowtohigh}    10.00
+
+#select remove option
+Selecting remove checkbox
+    Run Keyword If    Element Should Exist    ${removeproduct}    Click Element    ${removeproduct}
+
+Asserting product removed
+    Element Text Should Be    ${assertremove}    Your Shopping Cart is empty!
+
+#click assert
+Click update element
+    Click Element    ${clickupdate}
    
     

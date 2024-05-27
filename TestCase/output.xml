@@ -1,60 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T09:34:23.509083" rpa="false" schemaversion="5">
-<suite id="s1" name="TestBookmodulesortby" source="E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\TestCase\TestBookmodulesortby.robot">
-<test id="s1-t1" name="To verify sorting functionality" line="14">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T17:49:35.572900" rpa="false" schemaversion="5">
+<suite id="s1" name="TestBookmoduleaddtocart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleaddtocart.robot">
+<test id="s1-t1" name="To click product and select add to cart option" line="16">
 <kw name="Open a browser with url" owner="Genericresource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-27T09:34:23.837768" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<msg time="2024-05-27T17:49:35.760906" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-27T09:34:23.837768" elapsed="7.312675"/>
+<status status="PASS" start="2024-05-27T17:49:35.760906" elapsed="1.340344"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-27T09:34:31.150443" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<msg time="2024-05-27T17:49:37.101250" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-27T09:34:31.150443" elapsed="3.182951"/>
+<status status="PASS" start="2024-05-27T17:49:37.101250" elapsed="6.327095"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-27T09:34:34.333394" elapsed="0.004675"/>
+<status status="PASS" start="2024-05-27T17:49:43.428345" elapsed="0.001490"/>
 </kw>
-<status status="PASS" start="2024-05-27T09:34:23.837768" elapsed="10.500301"/>
+<status status="PASS" start="2024-05-27T17:49:35.745595" elapsed="7.684240"/>
 </kw>
-<kw name="To verify sorting by selecting &quot;A-Z&quot; option">
+<kw name="To click on book option">
 <kw name="To click book option" owner="bookmoduleresource">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-27T09:34:34.340004" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-05-27T17:49:43.430920" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-27T09:34:34.340004" elapsed="0.965685"/>
+<status status="PASS" start="2024-05-27T17:49:43.430920" elapsed="1.139513"/>
 </kw>
-<status status="PASS" start="2024-05-27T09:34:34.339499" elapsed="0.966190"/>
+<status status="PASS" start="2024-05-27T17:49:43.430920" elapsed="1.139992"/>
 </kw>
-<kw name="click on sortbyoption" owner="bookmoduleresource">
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-05-27T09:34:35.306712" level="INFO">Selecting options from selection list 'id:products-orderby' by index 1.</msg>
-<arg>${position_l}</arg>
-<arg>1</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-05-27T09:34:35.306712" elapsed="0.630454"/>
+<status status="PASS" start="2024-05-27T17:49:43.429835" elapsed="1.141077"/>
 </kw>
-<status status="PASS" start="2024-05-27T09:34:35.306712" elapsed="0.630454"/>
+<kw name="To verify shows book details">
+<kw name="Verifiying in book page" owner="bookmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T17:49:44.571925" level="INFO">Verifying element 'xpath:(//li/a)[5]' contains exact text 'BOOKS'.</msg>
+<arg>${book_l}</arg>
+<arg>BOOKS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T17:49:44.570912" elapsed="0.015248"/>
 </kw>
-<status status="PASS" start="2024-05-27T09:34:34.338069" elapsed="1.599097"/>
+<status status="PASS" start="2024-05-27T17:49:44.570912" elapsed="0.016634"/>
+</kw>
+<status status="PASS" start="2024-05-27T17:49:44.570912" elapsed="0.016634"/>
+</kw>
+<kw name="To select add to cart">
+<kw name="click on add to card button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T17:49:44.588550" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
+<arg>${addtocard_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T17:49:44.587546" elapsed="0.035546"/>
+</kw>
+<status status="PASS" start="2024-05-27T17:49:44.587546" elapsed="0.036800"/>
+</kw>
+<status status="PASS" start="2024-05-27T17:49:44.587546" elapsed="0.036800"/>
 </kw>
 <kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T09:34:35.939211" elapsed="3.106623"/>
+<status status="PASS" start="2024-05-27T17:49:44.624848" elapsed="2.143552"/>
 </kw>
-<status status="PASS" start="2024-05-27T09:34:35.938188" elapsed="3.107646"/>
+<status status="PASS" start="2024-05-27T17:49:44.624848" elapsed="2.143552"/>
 </kw>
-<status status="PASS" start="2024-05-27T09:34:23.837768" elapsed="15.208066"/>
+<status status="PASS" start="2024-05-27T17:49:35.745595" elapsed="11.022805"/>
 </test>
 <doc>Test case for Bookmodule</doc>
-<status status="PASS" start="2024-05-27T09:34:23.509083" elapsed="15.536751"/>
+<status status="PASS" start="2024-05-27T17:49:35.572900" elapsed="11.195500"/>
 </suite>
 <statistics>
 <total>
@@ -63,7 +78,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestBookmodulesortby">TestBookmodulesortby</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestBookmoduleaddtocart">TestBookmoduleaddtocart</stat>
 </suite>
 </statistics>
 <errors>

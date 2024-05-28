@@ -1,31 +1,19 @@
 ==============================================================================
-TestCase                                                                      
+Git Own Repo                                                                  
 ==============================================================================
-TestCase.TestBookmoduleview :: Test case for Bookmodule                       
+Git Own Repo.TestCase                                                         
 ==============================================================================
-To verify view mode of product                                          
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleview.robot:14
-    T:  To verify view mode of product    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleview.robot:16
-      To verify view mode of product in list format    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleview.robot:24
-      click on view option    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\Resources\bookmoduleresource.robot:60
-      Select From List By Index    ${view_l}    1
-      |  ${view_l} = id:products-viewmode (str)
-______________________________________________________________________________
-| FAIL |
-List with locator 'id:products-viewmode' not found.
+Git Own Repo.TestCase.TestBookmoduleview :: Test case for Bookmodule          
+==============================================================================
+To verify view mode of product                                        | PASS |
 ------------------------------------------------------------------------------
-TestCase.TestBookmoduleview :: Test case for Bookmodule               | FAIL |
-1 test, 0 passed, 1 failed
+Git Own Repo.TestCase.TestBookmoduleview :: Test case for Bookmodule  | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-TestCase                                                              | FAIL |
-1 test, 0 passed, 1 failed
+Git Own Repo.TestCase                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Git Own Repo                                                          | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\9\output.xml

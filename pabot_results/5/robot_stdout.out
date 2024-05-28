@@ -1,14 +1,36 @@
 ==============================================================================
-TestCase                                                                      
+Git Own Repo                                                                  
 ==============================================================================
-TestCase.TestBookmoduleremoveproduct :: Test case for Bookmodule              
+Git Own Repo.TestCase                                                         
 ==============================================================================
-To remove the product from shopping cart                              | PASS |
+Git Own Repo.TestCase.TestBookmoduleremoveproduct :: Test case for Bookmodule 
+==============================================================================
+To remove the product from shopping cart                                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremoveproduct.robot:14
+    T:  To remove the product from shopping cart    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremoveproduct.robot:16
+      To remove the product from the shopping cart    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremoveproduct.robot:27
+      click on shopping cart button    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\Resources\bookmoduleresource.robot:52
+      Click Link    ${shopping_cardbutton_l}
+      |  ${shopping_cardbutton_l} = javascript:document.querySelector('a.ico-cart > span') (str)
+______________________________________________________________________________
+| FAIL |
+Link with locator 'javascript:document.querySelector('a.ico-cart > span')' not found.
 ------------------------------------------------------------------------------
-TestCase.TestBookmoduleremoveproduct :: Test case for Bookmodule      | PASS |
-1 test, 1 passed, 0 failed
+Git Own Repo.TestCase.TestBookmoduleremoveproduct :: Test case for... | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-TestCase                                                              | PASS |
-1 test, 1 passed, 0 failed
+Git Own Repo.TestCase                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Git Own Repo                                                          | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\5\output.xml

@@ -1,85 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.463958" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1" name="TestBookmoduledisplay" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduledisplay.robot">
-<test id="s1-s1-t1" name="To verify display option" line="14">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:38.384601" rpa="false" schemaversion="5">
+<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
+<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1-s1" name="TestBookmoduledisplay" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduledisplay.robot">
+<test id="s1-s1-s1-t1" name="To verify display option" line="14">
 <kw name="Open a browser with url" owner="Genericresource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:24:55.203601" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T09:40:38.859972" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-27T22:24:55.203601" elapsed="42.558573"/>
+<status status="PASS" start="2024-05-28T09:40:38.859972" elapsed="6.219906"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:25:37.762174" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<msg time="2024-05-28T09:40:45.087883" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-27T22:25:37.762174" elapsed="20.342117"/>
+<status status="PASS" start="2024-05-28T09:40:45.079878" elapsed="4.563615"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-27T22:25:58.106847" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-28T09:40:49.645504" elapsed="0.022098"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:24:55.203601" elapsed="62.903246"/>
+<status status="PASS" start="2024-05-28T09:40:38.859972" elapsed="10.807630"/>
 </kw>
 <kw name="To verify 4 books display by selecting 4 option in the field">
 <kw name="To click book option" owner="bookmoduleresource">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:25:58.112354" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-05-28T09:40:49.675612" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-27T22:25:58.112354" elapsed="14.569094"/>
+<status status="PASS" start="2024-05-28T09:40:49.675612" elapsed="1.934204"/>
 </kw>
 <arg>Click Link</arg>
 <arg>${book_l}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:25:58.106847" elapsed="14.575120"/>
+<status status="PASS" start="2024-05-28T09:40:49.667602" elapsed="1.947301"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:25:58.106847" elapsed="14.575120"/>
+<status status="PASS" start="2024-05-28T09:40:49.667602" elapsed="1.947301"/>
 </kw>
 <kw name="click on display" owner="bookmoduleresource">
 <kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:12.683533" level="INFO">Selecting options from selection list 'id:products-pagesize' by index 0.</msg>
+<msg time="2024-05-28T09:40:51.614903" level="INFO">Selecting options from selection list 'id:products-pagesize' by index 0.</msg>
 <arg>${display_l}</arg>
 <arg>0</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-05-27T22:26:12.683016" elapsed="6.050276"/>
+<status status="PASS" start="2024-05-28T09:40:51.614903" elapsed="1.752475"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:12.681967" elapsed="6.051847"/>
+<status status="PASS" start="2024-05-28T09:40:51.614903" elapsed="1.752475"/>
 </kw>
 <kw name="Count Products and Verify Display Limit" owner="bookmoduleresource">
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:18.755789" level="INFO">${product_count} = 4</msg>
+<msg time="2024-05-28T09:40:53.410388" level="INFO">${product_count} = 4</msg>
 <var>${product_count}</var>
 <arg>${productitle_l}</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-05-27T22:26:18.733814" elapsed="0.021975"/>
+<status status="PASS" start="2024-05-28T09:40:53.367378" elapsed="0.043010"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${product_count} &lt;= 4</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-05-27T22:26:18.755789" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-28T09:40:53.415896" elapsed="0.001670"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:18.733814" elapsed="0.021975"/>
+<status status="PASS" start="2024-05-28T09:40:53.367378" elapsed="0.050188"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:25:58.106847" elapsed="20.653699"/>
+<status status="PASS" start="2024-05-28T09:40:49.667602" elapsed="3.749964"/>
 </kw>
 <kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T22:26:18.761653" elapsed="2.424304"/>
+<status status="PASS" start="2024-05-28T09:40:53.417566" elapsed="2.547427"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:18.760546" elapsed="2.425411"/>
+<status status="PASS" start="2024-05-28T09:40:53.417566" elapsed="2.547427"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-05-27T22:24:55.203601" elapsed="85.982356"/>
+<status status="PASS" start="2024-05-28T09:40:38.859972" elapsed="17.105021"/>
 </test>
 <doc>Test case for Bookmodule</doc>
-<status status="PASS" start="2024-05-27T22:24:54.561685" elapsed="86.627280"/>
+<status status="PASS" start="2024-05-28T09:40:38.438310" elapsed="17.526683"/>
 </suite>
-<status status="PASS" start="2024-05-27T22:24:54.524799" elapsed="86.665198"/>
+<status status="PASS" start="2024-05-28T09:40:38.436797" elapsed="17.531862"/>
+</suite>
+<status status="PASS" start="2024-05-28T09:40:38.409254" elapsed="17.559405"/>
 </suite>
 <statistics>
 <total>
@@ -89,8 +92,9 @@
 <stat pass="1" fail="0" skip="0">smoketest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmoduledisplay">TestCase.TestBookmoduledisplay</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestBookmoduledisplay">Git Own Repo.TestCase.TestBookmoduledisplay</stat>
 </suite>
 </statistics>
 <errors>

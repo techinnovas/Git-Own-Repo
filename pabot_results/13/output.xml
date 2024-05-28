@@ -1,87 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:26:18.640639" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1" name="TestInformationmoduleprivacy" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleprivacy.robot">
-<test id="s1-s1-t1" name="Verifying for Privacy notice page" line="15">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:41:00.388484" rpa="false" schemaversion="5">
+<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
+<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1-s1" name="TestInformationmoduleprivacy" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleprivacy.robot">
+<test id="s1-s1-s1-t1" name="Verifying for Privacy notice page" line="15">
 <kw name="Open a browser with url" owner="Genericresource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:19.307507" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T09:41:00.669650" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-27T22:26:19.306337" elapsed="2.869209"/>
+<status status="PASS" start="2024-05-28T09:41:00.669650" elapsed="1.779362"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:22.175546" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<msg time="2024-05-28T09:41:02.449012" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-27T22:26:22.175546" elapsed="31.799450"/>
+<status status="PASS" start="2024-05-28T09:41:02.449012" elapsed="31.646867"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-27T22:26:53.976028" elapsed="0.002088"/>
+<status status="PASS" start="2024-05-28T09:41:34.095879" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:19.303323" elapsed="34.675821"/>
+<status status="PASS" start="2024-05-28T09:41:00.668021" elapsed="33.427858"/>
 </kw>
 <kw name="To assert the Privacy notice page">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="To click on privacy option" owner="Informationmoduleresource">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:53.984021" level="INFO">Clicking link 'xpath://a[text()="Privacy Notice"]'.</msg>
+<msg time="2024-05-28T09:41:34.103893" level="INFO">Clicking link 'xpath://a[text()="Privacy Notice"]'.</msg>
 <arg>${privacy_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-27T22:26:53.980150" elapsed="197.158292"/>
+<status status="PASS" start="2024-05-28T09:41:34.103893" elapsed="2.216178"/>
 </kw>
 <arg>Click Link</arg>
 <arg>${privacy_l}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:26:53.980150" elapsed="197.158292"/>
+<status status="PASS" start="2024-05-28T09:41:34.095879" elapsed="2.224192"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:53.980150" elapsed="197.158292"/>
+<status status="PASS" start="2024-05-28T09:41:34.095879" elapsed="2.224192"/>
 </kw>
 <arg>Informationmoduleresource.To click on privacy option</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:26:53.980150" elapsed="197.158292"/>
+<status status="PASS" start="2024-05-28T09:41:34.095879" elapsed="2.224192"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="To verify privacy page" owner="Informationmoduleresource">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:30:11.139950" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Privacy policy'.</msg>
+<msg time="2024-05-28T09:41:36.325389" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Privacy policy'.</msg>
 <arg>${pagetitle}</arg>
 <arg>Privacy policy</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-27T22:30:11.139950" elapsed="0.041013"/>
+<status status="PASS" start="2024-05-28T09:41:36.320071" elapsed="0.036718"/>
 </kw>
 <arg>Element Text Should Be</arg>
 <arg>${pagetitle}</arg>
 <arg>Privacy policy</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:30:11.139950" elapsed="0.043098"/>
+<status status="PASS" start="2024-05-28T09:41:36.320071" elapsed="0.036718"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:30:11.139950" elapsed="0.043098"/>
+<status status="PASS" start="2024-05-28T09:41:36.320071" elapsed="0.040894"/>
 </kw>
 <arg>Informationmoduleresource.To verify privacy page</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:30:11.138442" elapsed="0.044606"/>
+<status status="PASS" start="2024-05-28T09:41:36.320071" elapsed="0.040894"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:53.979144" elapsed="197.203904"/>
+<status status="PASS" start="2024-05-28T09:41:34.095879" elapsed="2.265086"/>
 </kw>
 <kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T22:30:11.183048" elapsed="2.410941"/>
+<status status="PASS" start="2024-05-28T09:41:36.361971" elapsed="2.280073"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:30:11.183048" elapsed="2.410941"/>
+<status status="PASS" start="2024-05-28T09:41:36.361971" elapsed="2.280073"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-05-27T22:26:19.303323" elapsed="234.290666"/>
+<status status="PASS" start="2024-05-28T09:41:00.668021" elapsed="37.974023"/>
 </test>
 <doc>Test case for sitemap page</doc>
-<status status="PASS" start="2024-05-27T22:26:18.705236" elapsed="234.888753"/>
+<status status="PASS" start="2024-05-28T09:41:00.425356" elapsed="38.226830"/>
 </suite>
-<status status="PASS" start="2024-05-27T22:26:18.671047" elapsed="234.934792"/>
+<status status="PASS" start="2024-05-28T09:41:00.425356" elapsed="38.226830"/>
+</suite>
+<status status="PASS" start="2024-05-28T09:41:00.405418" elapsed="38.248295"/>
 </suite>
 <statistics>
 <total>
@@ -91,8 +94,9 @@
 <stat pass="1" fail="0" skip="0">smoketest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestInformationmoduleprivacy">TestCase.TestInformationmoduleprivacy</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestInformationmoduleprivacy">Git Own Repo.TestCase.TestInformationmoduleprivacy</stat>
 </suite>
 </statistics>
 <errors>

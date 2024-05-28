@@ -1,14 +1,19 @@
 ==============================================================================
-TestCase                                                                      
+Git Own Repo                                                                  
 ==============================================================================
-TestCase.TestBookmodulesortby :: Test case for Bookmodule                     
+Git Own Repo.TestCase                                                         
+==============================================================================
+Git Own Repo.TestCase.TestBookmodulesortby :: Test case for Bookmodule        
 ==============================================================================
 To verify sorting functionality                                       | PASS |
 ------------------------------------------------------------------------------
-TestCase.TestBookmodulesortby :: Test case for Bookmodule             | PASS |
+Git Own Repo.TestCase.TestBookmodulesortby :: Test case for Bookmo... | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
-TestCase                                                              | PASS |
+Git Own Repo.TestCase                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Git Own Repo                                                          | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\7\output.xml

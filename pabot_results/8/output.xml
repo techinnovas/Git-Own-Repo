@@ -1,70 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.556160" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1" name="TestBookmodulesortbyprice" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortbyprice.robot">
-<test id="s1-s1-t1" name="To verify sort the product by price" line="14">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:38.384601" rpa="false" schemaversion="5">
+<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
+<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1-s1" name="TestBookmodulesortbyprice" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortbyprice.robot">
+<test id="s1-s1-s1-t1" name="To verify sort the product by price" line="14">
 <kw name="Open a browser with url" owner="Genericresource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:24:55.290316" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T09:40:38.856458" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-27T22:24:55.290316" elapsed="58.370576"/>
+<status status="PASS" start="2024-05-28T09:40:38.856458" elapsed="5.238856"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:25:53.660892" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<msg time="2024-05-28T09:40:44.095314" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-27T22:25:53.660892" elapsed="26.215592"/>
+<status status="PASS" start="2024-05-28T09:40:44.095314" elapsed="1.676827"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-27T22:26:19.876484" elapsed="0.002011"/>
+<status status="PASS" start="2024-05-28T09:40:45.772141" elapsed="0.003167"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:24:55.290316" elapsed="84.588179"/>
+<status status="PASS" start="2024-05-28T09:40:38.856458" elapsed="6.918850"/>
 </kw>
 <kw name="To sort the product by low to high price option">
 <kw name="To click book option" owner="bookmoduleresource">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:19.886541" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-05-28T09:40:45.785265" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-27T22:26:19.886541" elapsed="5.858153"/>
+<status status="PASS" start="2024-05-28T09:40:45.783207" elapsed="6.093864"/>
 </kw>
 <arg>Click Link</arg>
 <arg>${book_l}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:26:19.886541" elapsed="5.858153"/>
+<status status="PASS" start="2024-05-28T09:40:45.783207" elapsed="6.093864"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:19.885534" elapsed="5.859160"/>
+<status status="PASS" start="2024-05-28T09:40:45.781469" elapsed="6.095602"/>
 </kw>
 <kw name="click on sortbypricelowtohighoption" owner="bookmoduleresource">
 <kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:25.746243" level="INFO">Selecting options from selection list 'id:products-orderby' by index 3.</msg>
+<msg time="2024-05-28T09:40:51.884159" level="INFO">Selecting options from selection list 'id:products-orderby' by index 3.</msg>
 <arg>${position_l}</arg>
 <arg>3</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-05-27T22:26:25.746243" elapsed="7.453594"/>
+<status status="PASS" start="2024-05-28T09:40:51.882152" elapsed="3.161825"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:25.744694" elapsed="7.455143"/>
+<status status="PASS" start="2024-05-28T09:40:51.882152" elapsed="3.161825"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:19.885534" elapsed="13.314303"/>
+<status status="PASS" start="2024-05-28T09:40:45.779947" elapsed="9.264030"/>
 </kw>
 <kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T22:26:33.199837" elapsed="2.327088"/>
+<status status="PASS" start="2024-05-28T09:40:55.050157" elapsed="2.348643"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:33.199837" elapsed="2.327088"/>
+<status status="PASS" start="2024-05-28T09:40:55.050157" elapsed="2.348643"/>
 </kw>
 <tag>Regressiontest</tag>
-<status status="PASS" start="2024-05-27T22:24:55.290316" elapsed="100.236609"/>
+<status status="PASS" start="2024-05-28T09:40:38.855952" elapsed="18.542848"/>
 </test>
 <doc>Test case for Bookmodule</doc>
-<status status="PASS" start="2024-05-27T22:24:54.630386" elapsed="100.899047"/>
+<status status="PASS" start="2024-05-28T09:40:38.443834" elapsed="18.954966"/>
 </suite>
-<status status="PASS" start="2024-05-27T22:24:54.583906" elapsed="100.945527"/>
+<status status="PASS" start="2024-05-28T09:40:38.441328" elapsed="18.957472"/>
+</suite>
+<status status="PASS" start="2024-05-28T09:40:38.409254" elapsed="18.989546"/>
 </suite>
 <statistics>
 <total>
@@ -74,8 +77,9 @@
 <stat pass="1" fail="0" skip="0">Regressiontest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmodulesortbyprice">TestCase.TestBookmodulesortbyprice</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestBookmodulesortbyprice">Git Own Repo.TestCase.TestBookmodulesortbyprice</stat>
 </suite>
 </statistics>
 <errors>

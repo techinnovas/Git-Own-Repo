@@ -22,6 +22,3 @@ To remove the product from the shopping cart
 
 #keyword to click add to cart button
     bookmoduleresource.click on add to card button
-
-#keyword to click shopping card
-    bookmoduleresource.click on shopping cart button

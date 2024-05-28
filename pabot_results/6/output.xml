@@ -1,74 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.447066" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1" name="TestBookmoduleshoppincart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot">
-<test id="s1-s1-t1" name="To verify shopping cart option" line="14">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:38.409254" rpa="false" schemaversion="5">
+<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
+<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1-s1" name="TestBookmoduleshoppincart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot">
+<test id="s1-s1-s1-t1" name="To verify shopping cart option" line="14">
 <kw name="Open a browser with url" owner="Genericresource" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:24:55.169590" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-05-28T09:40:38.903450" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-27T22:24:55.169590" elapsed="55.762526"/>
+<status status="PASS" start="2024-05-28T09:40:38.903450" elapsed="5.479803"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:25:50.932116" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<msg time="2024-05-28T09:40:44.383253" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-27T22:25:50.932116" elapsed="23.435258"/>
+<status status="PASS" start="2024-05-28T09:40:44.383253" elapsed="4.324993"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-27T22:26:14.367374" elapsed="0.003089"/>
+<status status="PASS" start="2024-05-28T09:40:48.709258" elapsed="0.003037"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:24:55.169590" elapsed="79.200873"/>
+<status status="PASS" start="2024-05-28T09:40:38.903450" elapsed="9.812033"/>
 </kw>
 <kw name="To click and validate shopping cart option">
 <kw name="click on shopping cart button" owner="bookmoduleresource">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:14.375573" level="INFO">Clicking element 'javascript:document.querySelector('a.ico-cart &gt; span')'.</msg>
-<msg time="2024-05-27T22:26:24.734970" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-27T22:26:24.734970" level="FAIL">Element with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</msg>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T09:40:48.715483" level="INFO">Clicking link 'javascript:document.querySelector('a.ico-cart &gt; span')'.</msg>
+<msg time="2024-05-28T09:40:58.916493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-28T09:40:58.916493" level="FAIL">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</msg>
 <arg>${shopping_cardbutton_l}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-05-27T22:26:14.375573" elapsed="10.364469">Element with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-28T09:40:48.715483" elapsed="10.201010">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
 </kw>
-<arg>Click Element</arg>
-<arg>${shopping_cardbutton_l}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T22:26:14.375573" elapsed="10.364469"/>
-</kw>
-<status status="PASS" start="2024-05-27T22:26:14.374062" elapsed="10.365980"/>
+<status status="FAIL" start="2024-05-28T09:40:48.715483" elapsed="10.205089">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
 </kw>
 <kw name="Asserting shopping cart page" owner="bookmoduleresource">
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-27T22:26:24.740042" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Shopping cart'.</msg>
-<msg time="2024-05-27T22:26:34.982716" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-27T22:26:34.982716" level="FAIL">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</msg>
-<arg>${verify_shopping}</arg>
-<arg>Shopping cart</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="FAIL" start="2024-05-27T22:26:24.740042" elapsed="10.242674">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</status>
+<status status="NOT RUN" start="2024-05-28T09:40:58.921089" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-05-27T22:26:24.740042" elapsed="10.250698">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</status>
-</kw>
-<status status="FAIL" start="2024-05-27T22:26:14.370463" elapsed="20.620277">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</status>
+<status status="FAIL" start="2024-05-28T09:40:48.715483" elapsed="10.205606">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
 </kw>
 <kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T22:26:34.992263" elapsed="2.396622"/>
+<status status="PASS" start="2024-05-28T09:40:58.921089" elapsed="2.295356"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:26:34.990740" elapsed="2.398145"/>
+<status status="PASS" start="2024-05-28T09:40:58.921089" elapsed="2.295356"/>
 </kw>
 <tag>Regressiontest</tag>
-<status status="FAIL" start="2024-05-27T22:24:55.169590" elapsed="102.220871">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</status>
+<status status="FAIL" start="2024-05-28T09:40:38.896444" elapsed="22.320001">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
 </test>
 <doc>Test case for Bookmodule</doc>
-<status status="FAIL" start="2024-05-27T22:24:54.530366" elapsed="102.860095"/>
+<status status="FAIL" start="2024-05-28T09:40:38.489539" elapsed="22.728954"/>
 </suite>
-<status status="FAIL" start="2024-05-27T22:24:54.486529" elapsed="102.903932"/>
+<status status="FAIL" start="2024-05-28T09:40:38.485522" elapsed="22.733981"/>
+</suite>
+<status status="FAIL" start="2024-05-28T09:40:38.446854" elapsed="22.773660"/>
 </suite>
 <statistics>
 <total>
@@ -78,8 +66,9 @@
 <stat pass="0" fail="1" skip="0">Regressiontest</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TestCase">TestCase</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestBookmoduleshoppincart">TestCase.TestBookmoduleshoppincart</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="TestBookmoduleshoppincart">Git Own Repo.TestCase.TestBookmoduleshoppincart</stat>
 </suite>
 </statistics>
 <errors>

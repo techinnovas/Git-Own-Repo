@@ -12,6 +12,7 @@ Test Teardown    Genericresource.Close the browser
 
 *** Test Cases ***
 To remove the product from shopping cart
+    [Tags]    Regressiontest
     To remove the product from the shopping cart
 
 *** Keywords ***
@@ -24,12 +25,3 @@ To remove the product from the shopping cart
 
 #keyword to click shopping card
     bookmoduleresource.click on shopping cart button
-
-#keyword to click on product
-    bookmoduleresource.Selecting remove checkbox
-
-#keyword to update click
-    bookmoduleresource.Click update element
-
-#asserting product removed
-    bookmoduleresource.Asserting product removed

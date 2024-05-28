@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.486529" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmoduleclickproduct" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleclickproduct.robot">
+<test id="s1-s1-t1" name="To verify product page" line="16">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:24:55.191381" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T22:24:55.191381" elapsed="52.883615"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:25:48.076996" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T22:25:48.075996" elapsed="18.396317"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T22:26:06.472313" elapsed="0.002009"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:24:55.187356" elapsed="71.289297"/>
+</kw>
+<kw name="To click on product and verify it shows product details">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:06.476653" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:06.476653" elapsed="5.204751"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:06.476653" elapsed="5.204751"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:06.476653" elapsed="5.204751"/>
+</kw>
+<kw name="click on product" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:11.683834" level="INFO">Clicking link 'xpath:(//h2/a)[1]'.</msg>
+<arg>${product_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:11.683834" elapsed="8.439469"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${product_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:11.683834" elapsed="8.439469"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:11.681404" elapsed="8.441899"/>
+</kw>
+<kw name="Asserting product page" owner="bookmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:20.123303" level="INFO">Verifying element 'xpath://div/h1' contains exact text 'Computing and Internet'.</msg>
+<arg>${asserting_product}</arg>
+<arg>Computing and Internet</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T22:26:20.123303" elapsed="0.086319"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:20.123303" elapsed="0.086319"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:06.476653" elapsed="13.736978"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T22:26:20.213631" elapsed="2.580400"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:20.213631" elapsed="2.580400"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:24:55.187356" elapsed="87.606675"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-27T22:24:54.589431" elapsed="88.206008"/>
+</suite>
+<status status="PASS" start="2024-05-27T22:24:54.540884" elapsed="88.258062"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmoduleclickproduct">TestCase.TestBookmoduleclickproduct</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

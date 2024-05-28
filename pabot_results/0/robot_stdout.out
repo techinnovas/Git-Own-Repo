@@ -1,0 +1,32 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.TestBookmoduleaddtocart :: Test case for Bookmodule                  
+==============================================================================
+To click product and select add to cart option                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleaddtocart.robot:15
+    T:  To click product and select add to cart option    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleaddtocart.robot:20
+      To verify product added    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleaddtocart.robot:41
+      verify product added in shopping cart    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\Resources\bookmoduleresource.robot:87
+      Wait Until Element Contains    ${verifyalert_l}    ${None}
+      |  ${verifyalert_l} = xpath://div/p (str)
+      |  ${None} = None (NoneType)
+______________________________________________________________________________
+| FAIL |
+Element 'xpath://div/p' did not get text 'None' in 5 seconds.
+------------------------------------------------------------------------------
+TestCase.TestBookmoduleaddtocart :: Test case for Bookmodule          | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCase                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  E:\EXPLEO\Git Own Repo\pabot_results\0\output.xml

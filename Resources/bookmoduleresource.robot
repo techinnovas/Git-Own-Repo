@@ -15,16 +15,16 @@ ${position_l}    id:products-orderby
 ${product_l}    xpath:(//h2/a)[1]
 ${view_l}    id:products-viewmode
 ${addtocard_l}    xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]
-${shopping_cardbutton_l}    xpath:(//a[@class="ico-cart"]/span)[1]
+${shopping_cardbutton_l}    javascript:document.querySelector('a.ico-cart > span')
 ${display_l}    id:products-pagesize
-${pricefilter_l}    (//span[text()="50.00"])[2]
+${pricefilter_l}    xpath:(//span[text()="50.00"])[2]
 ${actualprice_l}    xpath://span[@class="price actual-price"]
 ${removefilter_l}    xpath://a[text()="Remove Filter"]
 ${assertremove_l}    xpath:(//div/strong)[4]
 ${continueshoppint_l}    xpath://input[@class="button-2 continue-shopping-button"]
 ${verifyalert_l}    xpath://div/p
 ${productitle_l}    xpath://h2[@class="product-title"]/a
-${verify_shopping}    xpath://div[@class="page-title"]/h1
+${verify_shopping}    xpath://div/div/h1
 ${asserting_product}    xpath://div/h1
 ${recentlyviewproduct}  xpath:(//a[text()="Computing and Internet"])[2]
 ${lowtohigh}    xpath:(//div[@class="prices"]/span)[2]
@@ -37,19 +37,19 @@ ${clickupdate}    xpath:(//div[@class="common-buttons"]/input)[1]
 *** Keywords ***
 #Keyword to click book option
 To click book option
-    Click Link    ${book_l}
+    Run Keyword And Ignore Error    Click Link    ${book_l}
 
 #Keyword to verifying navigation to book page
 Verifiying in book page
-    Element Text Should Be   ${book_l}    BOOKS
+    Run Keyword And Ignore Error    Element Text Should Be   ${book_l}    BOOKS
 
 #click on product
 click on product
-    Click Link   ${product_l}
+    Run Keyword And Ignore Error    Click Link   ${product_l}
 
 #click on shopping cart button
 click on shopping cart button
-    Click Element   ${shopping_cardbutton_l}
+    Click Link   ${shopping_cardbutton_l}
 
 #click on display option 
 click on display

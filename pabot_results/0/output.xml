@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.524799" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmoduleaddtocart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleaddtocart.robot">
+<test id="s1-s1-t1" name="To click product and select add to cart option" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:24:55.217977" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T22:24:55.217977" elapsed="66.872625"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:02.090602" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T22:26:02.090602" elapsed="18.587582"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T22:26:20.678184" elapsed="0.007026"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:24:55.216954" elapsed="85.468256"/>
+</kw>
+<kw name="To click on book option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:20.691632" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:20.688720" elapsed="4.125564"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:20.688720" elapsed="4.125564"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:20.688720" elapsed="4.125564"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:20.685210" elapsed="4.129074"/>
+</kw>
+<kw name="To verify shows book details">
+<kw name="Verifiying in book page" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:24.814284" level="INFO">Verifying element 'xpath:(//li/a)[5]' contains exact text 'BOOKS'.</msg>
+<arg>${book_l}</arg>
+<arg>BOOKS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T22:26:24.814284" elapsed="0.064392"/>
+</kw>
+<arg>Element Text Should Be</arg>
+<arg>${book_l}</arg>
+<arg>BOOKS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:24.814284" elapsed="0.064392"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:24.814284" elapsed="0.064392"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:24.814284" elapsed="0.066401"/>
+</kw>
+<kw name="To select add to cart">
+<kw name="click on add to card button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:24.880685" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
+<arg>${addtocard_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:24.880685" elapsed="0.210971"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:24.880685" elapsed="0.211978"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:24.880685" elapsed="0.211978"/>
+</kw>
+<kw name="To verify product added">
+<kw name="verify product added in shopping cart" owner="bookmoduleresource">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:30.448842" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-27T22:26:30.448842" level="FAIL">Element 'xpath://div/p' did not get text 'None' in 5 seconds.</msg>
+<arg>${verifyalert_l}</arg>
+<arg>${None}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="FAIL" start="2024-05-27T22:26:25.092663" elapsed="5.359295">Element 'xpath://div/p' did not get text 'None' in 5 seconds.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${verifyalert_l}</arg>
+<arg>${None}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-05-27T22:26:30.451958" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-27T22:26:25.092663" elapsed="5.359295">Element 'xpath://div/p' did not get text 'None' in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-05-27T22:26:25.092663" elapsed="5.359295">Element 'xpath://div/p' did not get text 'None' in 5 seconds.</status>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T22:26:30.451958" elapsed="2.349456"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:30.451958" elapsed="2.349456"/>
+</kw>
+<tag>retest</tag>
+<status status="FAIL" start="2024-05-27T22:24:55.212946" elapsed="97.588468">Element 'xpath://div/p' did not get text 'None' in 5 seconds.</status>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="FAIL" start="2024-05-27T22:24:54.621738" elapsed="98.179676"/>
+</suite>
+<status status="FAIL" start="2024-05-27T22:24:54.563719" elapsed="98.237695"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">retest</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestBookmoduleaddtocart">TestCase.TestBookmoduleaddtocart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

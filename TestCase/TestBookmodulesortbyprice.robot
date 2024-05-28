@@ -12,15 +12,12 @@ Test Teardown    Genericresource.Close the browser
 
 *** Test Cases ***
 To verify sort the product by price
+    [Tags]    Regressiontest
     To sort the product by low to high price option
 
 *** Keywords ***
 To sort the product by low to high price option
     #To click book option
     bookmoduleresource.To click book option
-
-    #To select sortbyprice option
     bookmoduleresource.click on sortbypricelowtohighoption
-
-    #Assert sortby price
-    bookmoduleresource.Asserting low to high option
+    

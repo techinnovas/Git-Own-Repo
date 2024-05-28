@@ -1,0 +1,20 @@
+datasources:b3f6904d843cf47d085b1f3c6365b32319751991
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:bd7da65a8b5efb4a80d0ae3b2e86b7f5a341af3a
+--test TestCase.TestBookmoduleaddtocart.To click product and select add to cart option
+--test TestCase.TestBookmoduleclickproduct.To verify product page
+--test TestCase.TestBookmoduledisplay.To verify display option
+--test TestCase.TestBookmodulefilterprice.To verify for selecting price filter "over 50.00" option
+--test TestCase.TestBookmoduleremovefilter.To verify for removing filter price option
+--test TestCase.TestBookmoduleremoveproduct.To remove the product from shopping cart
+--test TestCase.TestBookmoduleshoppincart.To verify shopping cart option
+--test TestCase.TestBookmodulesortby.To verify sorting functionality
+--test TestCase.TestBookmodulesortbyprice.To verify sort the product by price
+--test TestCase.TestBookmoduleview.To verify view mode of product
+--test TestCase.TestInformationmoduleaboutus.Verifying for about us page
+--test TestCase.TestInformationmodulecondition.Verifying for Privacy Condition page
+--test TestCase.TestInformationmodulecontactus.Verifying for contact us page
+--test TestCase.TestInformationmoduleprivacy.Verifying for Privacy notice page
+--test TestCase.TestInformationmoduleshipping.Verifying for shipping and return page
+--test TestCase.TestInformationmodulesitemap.Verifying for site map page'

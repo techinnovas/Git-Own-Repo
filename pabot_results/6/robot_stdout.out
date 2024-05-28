@@ -1,0 +1,31 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.TestBookmoduleshoppincart :: Test case for Bookmodule                
+==============================================================================
+To verify shopping cart option                                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot:14
+    T:  To verify shopping cart option    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot:16
+      To click and validate shopping cart option    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot:21
+      Asserting shopping cart page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\Resources\bookmoduleresource.robot:126
+      Element Text Should Be    ${verify_shopping}    Shopping cart
+      |  ${verify_shopping} = xpath://div[@class="page-title"]/h1 (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath://div[@class="page-title"]/h1' not found.
+------------------------------------------------------------------------------
+TestCase.TestBookmoduleshoppincart :: Test case for Bookmodule        | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCase                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  E:\EXPLEO\Git Own Repo\pabot_results\6\output.xml

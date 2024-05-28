@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.630386" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestInformationmoduleaboutus" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleaboutus.robot">
+<test id="s1-s1-t1" name="Verifying for about us page" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:24:55.377208" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T22:24:55.377208" elapsed="53.483625"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:25:48.860833" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T22:25:48.860833" elapsed="4.982508"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T22:25:53.843341" elapsed="0.007399"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:24:55.371683" elapsed="58.480676"/>
+</kw>
+<kw name="To assert the about us page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on condition option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:25:53.856038" level="INFO">Clicking link 'xpath://a[text()="Conditions of Use"]'.</msg>
+<arg>${condition_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:25:53.856038" elapsed="47.747557"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${condition_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:25:53.856038" elapsed="47.747557"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:25:53.855033" elapsed="47.748562"/>
+</kw>
+<arg>Informationmoduleresource.To click on condition option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:25:53.854422" elapsed="47.749173"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify condtion page" owner="Informationmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:41.611604" level="INFO">Verifying element 'xpath://a[text()="Conditions of Use"]' contains exact text 'Conditions of Use'.</msg>
+<arg>${condition_l}</arg>
+<arg>Conditions of Use</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T22:26:41.611604" elapsed="0.039673"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:41.611604" elapsed="0.039673"/>
+</kw>
+<arg>Informationmoduleresource.To verify condtion page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:41.611604" elapsed="0.040766"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:25:53.853417" elapsed="47.798953"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T22:26:41.652370" elapsed="2.322184"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:41.652370" elapsed="2.322184"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-27T22:24:55.371683" elapsed="108.602871"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-27T22:24:54.713761" elapsed="109.260793"/>
+</suite>
+<status status="PASS" start="2024-05-27T22:24:54.663744" elapsed="109.316379"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoketest</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestInformationmoduleaboutus">TestCase.TestInformationmoduleaboutus</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

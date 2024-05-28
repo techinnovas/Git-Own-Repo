@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.557665" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmoduleview" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleview.robot">
+<test id="s1-s1-t1" name="To verify view mode of product" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:24:55.271260" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T22:24:55.271260" elapsed="61.430214"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:25:56.701474" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T22:25:56.701474" elapsed="8.906143"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T22:26:05.607617" elapsed="0.007025"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:24:55.271260" elapsed="70.343382"/>
+</kw>
+<kw name="To verify view mode of product in list format">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:05.618690" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-05-27T22:26:15.886824" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-27T22:26:15.886824" level="FAIL">Link with locator 'xpath:(//li/a)[5]' not found.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-27T22:26:05.618690" elapsed="10.337523">Link with locator 'xpath:(//li/a)[5]' not found.</status>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:05.618690" elapsed="10.337523"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:05.617650" elapsed="10.338563"/>
+</kw>
+<kw name="click on view option" owner="bookmoduleresource">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:15.957219" level="INFO">Selecting options from selection list 'id:products-viewmode' by index 1.</msg>
+<msg time="2024-05-27T22:26:26.189706" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-27T22:26:26.189706" level="FAIL">List with locator 'id:products-viewmode' not found.</msg>
+<arg>${view_l}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="FAIL" start="2024-05-27T22:26:15.957219" elapsed="10.232487">List with locator 'id:products-viewmode' not found.</status>
+</kw>
+<status status="FAIL" start="2024-05-27T22:26:15.957219" elapsed="10.232487">List with locator 'id:products-viewmode' not found.</status>
+</kw>
+<status status="FAIL" start="2024-05-27T22:26:05.614642" elapsed="20.575064">List with locator 'id:products-viewmode' not found.</status>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T22:26:26.189706" elapsed="2.510726"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:26.189706" elapsed="2.511734"/>
+</kw>
+<tag>smoketest</tag>
+<status status="FAIL" start="2024-05-27T22:24:55.271260" elapsed="93.430180">List with locator 'id:products-viewmode' not found.</status>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="FAIL" start="2024-05-27T22:24:54.630386" elapsed="94.072837"/>
+</suite>
+<status status="FAIL" start="2024-05-27T22:24:54.589431" elapsed="94.113792"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">smoketest</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestBookmoduleview">TestCase.TestBookmoduleview</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

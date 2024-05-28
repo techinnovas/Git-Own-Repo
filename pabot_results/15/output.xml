@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:26:24.353032" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestInformationmodulesitemap" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmodulesitemap.robot">
+<test id="s1-s1-t1" name="Verifying for site map page'" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:25.088707" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T22:26:25.088707" elapsed="2.612041"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:27.702434" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T22:26:27.702434" elapsed="26.725635"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T22:26:54.430779" elapsed="0.000509"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:25.084334" elapsed="29.349448"/>
+</kw>
+<kw name="To assert the site map page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on sitemap option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:54.436309" level="INFO">Clicking link 'xpath://a[text()="Sitemap"]'.</msg>
+<arg>${sitemap_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:54.436309" elapsed="1.849707"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${sitemap_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:54.436309" elapsed="1.850991"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:54.433782" elapsed="1.853518"/>
+</kw>
+<arg>Informationmoduleresource.To click on sitemap option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:54.433782" elapsed="1.853518"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify sitepage" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:56.287300" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Sitemap'.</msg>
+<arg>${pagetitle}</arg>
+<arg>Sitemap</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T22:26:56.287300" elapsed="0.044093"/>
+</kw>
+<arg>Element Text Should Be</arg>
+<arg>${pagetitle}</arg>
+<arg>Sitemap</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:56.287300" elapsed="0.044093"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:56.287300" elapsed="0.044618"/>
+</kw>
+<arg>Informationmoduleresource.To verify sitepage</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:56.287300" elapsed="0.044618"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:56.333408" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:56.333408" elapsed="2.029077"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:56.333408" elapsed="2.029077"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:56.331918" elapsed="2.030567"/>
+</kw>
+<arg>bookmoduleresource.To click book option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:56.331918" elapsed="2.030567"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:58.362485" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:58.362485" elapsed="0.696757"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:58.362485" elapsed="0.697783"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:58.362485" elapsed="0.697783"/>
+</kw>
+<arg>bookmoduleresource.To click book option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:58.362485" elapsed="0.697783"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-27T22:26:54.433782" elapsed="4.627024"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T22:26:59.062029" elapsed="2.463491"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:59.061454" elapsed="2.464066"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:25.080300" elapsed="36.445220"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-27T22:26:24.411541" elapsed="37.115853"/>
+</suite>
+<status status="PASS" start="2024-05-27T22:26:24.379325" elapsed="37.149743"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestInformationmodulesitemap">TestCase.TestInformationmodulesitemap</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

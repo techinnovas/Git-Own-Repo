@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T22:24:54.447066" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmoduleremoveproduct" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremoveproduct.robot">
+<test id="s1-s1-t1" name="To remove the product from shopping cart" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:24:55.179640" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T22:24:55.179640" elapsed="51.440496"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:25:46.621540" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T22:25:46.621540" elapsed="32.889575"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T22:26:19.511115" elapsed="0.003016"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:24:55.175616" elapsed="84.338515"/>
+</kw>
+<kw name="To remove the product from the shopping cart">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:19.519678" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:19.518113" elapsed="6.216080"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:19.517103" elapsed="6.217090"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:19.517103" elapsed="6.217090"/>
+</kw>
+<kw name="click on add to card button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:25.739529" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
+<arg>${addtocard_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T22:26:25.738202" elapsed="0.106517"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:25.738202" elapsed="0.106517"/>
+</kw>
+<kw name="click on shopping cart button" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-27T22:26:25.851460" level="INFO">Clicking element 'javascript:document.querySelector('a.ico-cart &gt; span')'.</msg>
+<msg time="2024-05-27T22:26:36.096215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-27T22:26:36.096215" level="FAIL">Element with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</msg>
+<arg>${shopping_cardbutton_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-27T22:26:25.851460" elapsed="10.247300">Element with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>${shopping_cardbutton_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-27T22:26:25.850938" elapsed="10.247822"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:25.844719" elapsed="10.254041"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:19.515637" elapsed="16.583123"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T22:26:36.098760" elapsed="2.369057"/>
+</kw>
+<status status="PASS" start="2024-05-27T22:26:36.098760" elapsed="2.369057"/>
+</kw>
+<tag>Regressiontest</tag>
+<status status="PASS" start="2024-05-27T22:24:55.175616" elapsed="103.292201"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-27T22:24:54.530366" elapsed="103.937451"/>
+</suite>
+<status status="PASS" start="2024-05-27T22:24:54.486529" elapsed="103.981288"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regressiontest</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmoduleremoveproduct">TestCase.TestBookmoduleremoveproduct</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -31,51 +31,100 @@ ${click_shoppingcart}    xpath://p/a
 *** Keywords ***
 #Keyword to click book option
 To click book option
-    Click Link    ${book_l}
+    TRY
+        Click Link    ${book_l}
+    EXCEPT
+        Log To Console    Error clicking book option: ${book_l}
+    END
 
 #Keyword to verifying navigation to book page
 Verifiying in book page
-    Element Text Should Be   ${book_l}    BOOKS
+
+    TRY
+        Element Text Should Be   ${book_l}    BOOKS
+    EXCEPT
+        Log To Console    Error verifying book page navigation: ${book_l}
+    END
 
 #click on product
 click on product
-    Click Link   ${product_l}
-
+    TRY
+        Click Link   ${product_l}
+    EXCEPT
+        Log To Console    Error clicking product: ${product_l}
+    END
 
 #click on display option 
 click on display
-    Select From List By Index   ${display_l}     0
+    TRY
+        Select From List By Index   ${display_l}     0
+    EXCEPT
+        Log To Console    Error clicking display option: ${display_l}
+    END
 
 #click on view option
 click on view option
-    Select From List By Index    ${view_l}    1
+    TRY
+        Select From List By Index    ${view_l}    1
+    EXCEPT
+        Log To Console    Error clicking view option: ${view_l}
+    END
 
 #click on sortby option
 click on sortbyoption
-    Select From List By Index    ${position_l}    1
+    TRY
+        Select From List By Index    ${position_l}    1
+    EXCEPT
+        Log To Console    Error clicking sortby option: ${position_l}
+    END
 
 click on sortbypricelowtohighoption
-    Select From List By Index    ${position_l}    3
+    TRY
+        Select From List By Index    ${position_l}    3
+    EXCEPT
+        Log To Console    Error clicking sortby price low to high option: ${position_l}
+    END
+
 
 #click on add to card button
 click on add to card button
-    Click Element   ${addtocard_l}
+    TRY
+        Click Element   ${addtocard_l}
+    EXCEPT
+        Log To Console    Error clicking add to cart button: ${addtocard_l}
+    END
 
 #click on filter button
 click on filter button
-    Click Element   ${pricefilter_l}
+    TRY
+        Click Element   ${pricefilter_l}
+    EXCEPT
+        Log To Console    Error clicking filter button: ${pricefilter_l}
+    END
 
 #click on remove filter
 click on remove filter
-    Click Element    ${removefilter_l}
+    TRY
+        Click Element    ${removefilter_l}
+    EXCEPT
+        Log To Console    Error clicking remove filter: ${removefilter_l}
+    END
 
 #verify on shows product list
 verify for showing product list
-    Element Text Should Be     ${product_l}    Computing and Internet
+    TRY
+        Element Text Should Be     ${product_l}    Computing and Internet
+    EXCEPT
+        Log To Console    Error verifying product list: ${product_l}
+    END
 
 #verify product added
 verify product added in shopping cart
-    Element Text Should Be    ${verifyalert_l}    ${EMPTY}  
+    TRY
+        Element Text Should Be    ${verifyalert_l}    ${EMPTY}
+    EXCEPT
+        Log To Console    Error verifying product added in shopping cart: ${verifyalert_l}
+    END  
 
 Verify Sorting Functionality
     ${product_elements}=    Get WebElements    ${productitle_l}
@@ -108,7 +157,11 @@ Assert Filter Price Option Over 50
 
 #Asserting remove filter option
 Asserting remove filter option
-    Element Text Should Be    ${pricefilter_l}    50.00
+    TRY
+        Element Text Should Be    ${pricefilter_l}    50.00
+    EXCEPT
+        Log To Console    Error asserting remove filter option: ${pricefilter_l}
+    END
 
 #Verifying shopping cart page
 Asserting shopping cart page

@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T16:17:51.100099" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmoduleaddtocart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleaddtocart.robot">
+<test id="s1-s1-t1" name="To click product and select add to cart option" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:17:51.634627" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:17:51.634627" elapsed="2.258920"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:17:53.893547" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:17:53.893547" elapsed="3.219933"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:17:57.113480" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:51.634627" elapsed="5.478853"/>
+</kw>
+<kw name="To click on book option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:17:57.121500" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:17:57.121500" elapsed="0.914667"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:17:57.121500" elapsed="0.916079"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:57.121500" elapsed="0.916079"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:57.121500" elapsed="0.916079"/>
+</kw>
+<kw name="To verify shows book details">
+<kw name="Verifiying in book page" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:17:58.040894" level="INFO">Verifying element 'xpath:(//li/a)[5]' contains exact text 'BOOKS'.</msg>
+<arg>${book_l}</arg>
+<arg>BOOKS</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:17:58.040894" elapsed="0.024532"/>
+</kw>
+<arg>Element Text Should Be</arg>
+<arg>${book_l}</arg>
+<arg>BOOKS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:17:58.040894" elapsed="0.024532"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:58.040894" elapsed="0.024532"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:58.040295" elapsed="0.025131"/>
+</kw>
+<kw name="To select add to cart">
+<kw name="click on add to card button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:17:58.070186" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
+<arg>${addtocard_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:17:58.069669" elapsed="0.062097"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:58.065426" elapsed="0.067475"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:58.065426" elapsed="0.067475"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:17:58.134245" elapsed="2.203609"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:17:58.134245" elapsed="2.203609"/>
+</kw>
+<tag>retest</tag>
+<status status="PASS" start="2024-05-28T16:17:51.634627" elapsed="8.703227"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:17:51.240142" elapsed="9.097712"/>
+</suite>
+<suite id="s1-s2" name="TestBookmoduleclickproduct" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleclickproduct.robot">
+<test id="s1-s2-t1" name="To verify product page" line="16">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:00.353473" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:00.353473" elapsed="1.767853"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:02.132835" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:02.132835" elapsed="4.213380"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:18:06.348227" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:00.353473" elapsed="5.994754"/>
+</kw>
+<kw name="To click on product and verify it shows product details">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:06.353413" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:06.353413" elapsed="0.996504"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:06.353413" elapsed="0.997530"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:06.353413" elapsed="0.997530"/>
+</kw>
+<kw name="click on product" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:07.354224" level="INFO">Clicking link 'xpath:(//h2/a)[1]'.</msg>
+<arg>${product_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:07.354049" elapsed="1.586775"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${product_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:07.353792" elapsed="1.587435"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:07.353272" elapsed="1.587955"/>
+</kw>
+<kw name="Asserting product page" owner="bookmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:08.944021" level="INFO">Verifying element 'xpath://div/h1' contains exact text 'Computing and Internet'.</msg>
+<arg>${asserting_product}</arg>
+<arg>Computing and Internet</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:18:08.944021" elapsed="0.028889"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:08.941227" elapsed="0.035242"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:06.352991" elapsed="2.623478"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:18:08.976469" elapsed="2.215393"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:08.976469" elapsed="2.215393"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:18:00.353473" elapsed="10.838389"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:00.337854" elapsed="10.861433"/>
+</suite>
+<suite id="s1-s3" name="TestBookmoduledisplay" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduledisplay.robot">
+<test id="s1-s3-t1" name="To verify display option" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:11.207879" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:11.207879" elapsed="1.696511"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:12.905449" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:12.905449" elapsed="3.403817"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:18:16.309266" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:11.207879" elapsed="5.101387"/>
+</kw>
+<kw name="To verify 4 books display by selecting 4 option in the field">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:16.318418" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:16.318418" elapsed="0.889379"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:16.318418" elapsed="0.892389"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:16.317285" elapsed="0.893522"/>
+</kw>
+<kw name="click on display" owner="bookmoduleresource">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:17.210807" level="INFO">Selecting options from selection list 'id:products-pagesize' by index 0.</msg>
+<arg>${display_l}</arg>
+<arg>0</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-05-28T16:18:17.210807" elapsed="0.705702"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:17.210807" elapsed="0.705702"/>
+</kw>
+<kw name="Count Products and Verify Display Limit" owner="bookmoduleresource">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:17.942666" level="INFO">${product_count} = 4</msg>
+<var>${product_count}</var>
+<arg>${productitle_l}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:17.920567" elapsed="0.022099"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${product_count} &lt;= 4</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-28T16:18:17.945269" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:17.916509" elapsed="0.028760"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:16.317285" elapsed="1.627984"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:18:17.945269" elapsed="2.208441"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:17.945269" elapsed="2.208441"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:18:11.207879" elapsed="8.945831"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:11.201871" elapsed="8.951839"/>
+</suite>
+<suite id="s1-s4" name="TestBookmodulefilterprice" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulefilterprice.robot">
+<test id="s1-s4-t1" name="To verify for selecting price filter &quot;over 50.00&quot; option" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:20.168991" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:20.168991" elapsed="1.668860"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:21.838911" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:21.838911" elapsed="3.128517"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:18:24.967428" elapsed="0.008297"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:20.168991" elapsed="4.806734"/>
+</kw>
+<kw name="To verify for select price filter &quot;over 50.00&quot; option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:24.975725" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:24.975725" elapsed="1.123286"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:24.975725" elapsed="1.125350"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:24.975725" elapsed="1.125350"/>
+</kw>
+<kw name="click on filter button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:26.102100" level="INFO">Clicking element '(//span[text()="50.00"])[2]'.</msg>
+<arg>${pricefilter_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:26.102100" elapsed="0.879311"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:26.102100" elapsed="0.881874"/>
+</kw>
+<kw name="Assert Filter Price Option Over 50" owner="bookmoduleresource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${productitle_l}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-28T16:18:26.984776" elapsed="0.023257"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:27.024418" level="INFO">@{product_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="922cea785c4daa579cd15d3666b3a3d5", element="f.584C05132CEA49D7876FC4F9C9FDF565.d.0328E385CA4DB55306FA04857E385B78.e.68")&gt; ]</msg>
+<var>@{product_elements}</var>
+<arg>${actualprice_l}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:27.008033" elapsed="0.016385"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:27.045224" level="INFO">${price} = 51.00</msg>
+<var>${price}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:27.029304" elapsed="0.015920"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${price}' &lt;= '$50.00'</arg>
+<arg>Fail</arg>
+<arg>Product price '${price}' is not over $50.00</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-05-28T16:18:27.048315" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="922cea785c4daa579cd15d3666b3a3d5", element="f.584C05132CEA49D7876FC4F9C9FDF565.d.0328E385CA4DB55306FA04857E385B78.e.68")&gt;</var>
+<status status="PASS" start="2024-05-28T16:18:27.024418" elapsed="0.023897"/>
+</iter>
+<var>${element}</var>
+<value>@{product_elements}</value>
+<status status="PASS" start="2024-05-28T16:18:27.024418" elapsed="0.023897"/>
+</for>
+<status status="PASS" start="2024-05-28T16:18:26.984776" elapsed="0.063539"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:24.975725" elapsed="2.072590"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:18:27.048315" elapsed="2.227633"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:27.048315" elapsed="2.227633"/>
+</kw>
+<tag>Regression test</tag>
+<status status="PASS" start="2024-05-28T16:18:20.168991" elapsed="9.106957"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:20.153710" elapsed="9.122238"/>
+</suite>
+<suite id="s1-s5" name="TestBookmoduleremovefilter" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremovefilter.robot">
+<test id="s1-s5-t1" name="To verify for removing filter price option" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:29.291903" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:29.291903" elapsed="1.675173"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:30.967076" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:30.967076" elapsed="3.023700"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:18:33.993660" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:29.291903" elapsed="4.701757"/>
+</kw>
+<kw name="To verify remove filter option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:33.998492" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:33.998492" elapsed="0.960629"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:33.997486" elapsed="0.963247"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:33.993660" elapsed="0.967073"/>
+</kw>
+<kw name="click on filter button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:34.960733" level="INFO">Clicking element '(//span[text()="50.00"])[2]'.</msg>
+<arg>${pricefilter_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:34.960733" elapsed="0.719236"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:34.960733" elapsed="0.720786"/>
+</kw>
+<kw name="click on remove filter" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:35.682601" level="INFO">Clicking element 'xpath://a[text()="Remove Filter"]'.</msg>
+<arg>${removefilter_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:35.682601" elapsed="0.599518"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:35.681519" elapsed="0.604050"/>
+</kw>
+<kw name="Asserting remove filter option" owner="bookmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:36.285569" level="INFO">Verifying element '(//span[text()="50.00"])[2]' contains exact text '50.00'.</msg>
+<arg>${pricefilter_l}</arg>
+<arg>50.00</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:18:36.285569" elapsed="0.033230"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:36.285569" elapsed="0.034774"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:33.993660" elapsed="2.326683"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:18:36.320343" elapsed="2.222209"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:36.320343" elapsed="2.222209"/>
+</kw>
+<tag>Regressiontest</tag>
+<status status="PASS" start="2024-05-28T16:18:29.291903" elapsed="9.251634"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:29.275948" elapsed="9.273214"/>
+</suite>
+<suite id="s1-s6" name="TestBookmoduleremoveproduct" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremoveproduct.robot">
+<test id="s1-s6-t1" name="To remove the product from shopping cart" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:38.561975" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:38.561975" elapsed="1.734955"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:40.298939" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:40.298939" elapsed="3.223792"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:18:43.528251" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:38.561975" elapsed="4.966276"/>
+</kw>
+<kw name="To remove the product from the shopping cart">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:43.528251" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:43.528251" elapsed="1.167405"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:43.528251" elapsed="1.168601"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:43.528251" elapsed="1.168601"/>
+</kw>
+<kw name="click on add to card button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:44.696852" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
+<arg>${addtocard_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:44.696852" elapsed="0.080134"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:44.696852" elapsed="0.083396"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:43.528251" elapsed="1.251997"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:18:44.780248" elapsed="2.214691"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:44.780248" elapsed="2.214691"/>
+</kw>
+<tag>Regressiontest</tag>
+<status status="PASS" start="2024-05-28T16:18:38.560972" elapsed="8.433967"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:38.552004" elapsed="8.442935"/>
+</suite>
+<suite id="s1-s7" name="TestBookmoduleshoppincart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot">
+<test id="s1-s7-t1" name="To verify add to cart button by login" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:47.010860" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:47.010860" elapsed="1.701556"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:48.715923" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:48.715923" elapsed="3.334397"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:18:52.053607" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:47.010860" elapsed="5.042747"/>
+</kw>
+<kw name="To click login and add to card">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:52.057326" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:52.057326" elapsed="0.955417"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:18:52.057326" elapsed="0.957481"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:52.057326" elapsed="0.957481"/>
+</kw>
+<kw name="click on add to card button" owner="bookmoduleresource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:53.016370" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
+<arg>${addtocard_l}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:18:53.015852" elapsed="0.077001"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:53.014807" elapsed="0.078046"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:52.057326" elapsed="1.035527"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:18:53.092853" elapsed="2.227495"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:53.092853" elapsed="2.227495"/>
+</kw>
+<tag>Regressiontest</tag>
+<status status="PASS" start="2024-05-28T16:18:47.010860" elapsed="8.309488"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:46.994939" elapsed="8.325409"/>
+</suite>
+<suite id="s1-s8" name="TestBookmodulesortby" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortby.robot">
+<test id="s1-s8-t1" name="To verify sorting functionality" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:55.336100" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:18:55.336100" elapsed="1.661738"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:18:56.997838" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:18:56.997838" elapsed="3.837910"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:00.835748" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:18:55.336100" elapsed="5.499648"/>
+</kw>
+<kw name="To verify sorting by selecting &quot;A-Z&quot; option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:00.847703" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:00.844087" elapsed="1.002726"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:00.844087" elapsed="1.002726"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:00.844087" elapsed="1.002726"/>
+</kw>
+<kw name="click on sortbyoption" owner="bookmoduleresource">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:01.846813" level="INFO">Selecting options from selection list 'id:products-orderby' by index 1.</msg>
+<arg>${position_l}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-05-28T16:19:01.846813" elapsed="0.681803"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:01.846813" elapsed="0.681803"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:00.844087" elapsed="1.684529"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:02.528616" elapsed="2.246554"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:02.528616" elapsed="2.246554"/>
+</kw>
+<tag>Regressiontest</tag>
+<status status="PASS" start="2024-05-28T16:18:55.336100" elapsed="9.439070"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:18:55.320348" elapsed="9.454822"/>
+</suite>
+<suite id="s1-s9" name="TestBookmodulesortbyprice" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortbyprice.robot">
+<test id="s1-s9-t1" name="To verify sort the product by price" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:04.790534" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:04.790534" elapsed="1.597344"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:06.397397" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:06.387878" elapsed="3.026625"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:09.415983" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:04.790534" elapsed="4.625449"/>
+</kw>
+<kw name="To sort the product by low to high price option">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:09.423004" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:09.423004" elapsed="0.929979"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:09.423004" elapsed="0.932824"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:09.423004" elapsed="0.933060"/>
+</kw>
+<kw name="click on sortbypricelowtohighoption" owner="bookmoduleresource">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:10.357862" level="INFO">Selecting options from selection list 'id:products-orderby' by index 3.</msg>
+<arg>${position_l}</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-05-28T16:19:10.357189" elapsed="0.709157"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:10.356064" elapsed="0.710282"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:09.423004" elapsed="1.643342"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:11.070004" elapsed="2.232302"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:11.069927" elapsed="2.232379"/>
+</kw>
+<tag>Regressiontest</tag>
+<status status="PASS" start="2024-05-28T16:19:04.790534" elapsed="8.511772"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:19:04.775170" elapsed="8.527136"/>
+</suite>
+<suite id="s1-s10" name="TestBookmoduleview" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleview.robot">
+<test id="s1-s10-t1" name="To verify view mode of product" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:13.317932" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:13.317932" elapsed="1.668843"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:14.986775" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:14.986775" elapsed="3.043833"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:18.030608" elapsed="0.004271"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:13.317932" elapsed="4.719010"/>
+</kw>
+<kw name="To verify view mode of product in list format">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:18.038145" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:18.038145" elapsed="0.923944"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:18.038145" elapsed="0.923944"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:18.038145" elapsed="0.923944"/>
+</kw>
+<kw name="click on view option" owner="bookmoduleresource">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:18.962089" level="INFO">Selecting options from selection list 'id:products-viewmode' by index 1.</msg>
+<arg>${view_l}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-05-28T16:19:18.962089" elapsed="0.689728"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:18.962089" elapsed="0.692978"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:18.038145" elapsed="1.616922"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:19.656661" elapsed="2.224722"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:19.656661" elapsed="2.224722"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:19:13.317932" elapsed="8.563451"/>
+</test>
+<doc>Test case for Bookmodule</doc>
+<status status="PASS" start="2024-05-28T16:19:13.302306" elapsed="8.584626"/>
+</suite>
+<suite id="s1-s11" name="TestInformationmoduleaboutus" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleaboutus.robot">
+<test id="s1-s11-t1" name="Verifying for about us page" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:21.897439" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:21.897439" elapsed="1.670425"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:23.568916" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:23.568916" elapsed="3.587483"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.156399" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:21.897439" elapsed="5.267031"/>
+</kw>
+<kw name="To assert the about us page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on condition option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:27.164470" level="INFO">Clicking link 'xpath://a[text()="Conditions of Use"]'.</msg>
+<arg>${condition_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.164470" elapsed="0.530773"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${condition_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.164470" elapsed="0.533621"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:27.164470" elapsed="0.533621"/>
+</kw>
+<arg>Informationmoduleresource.To click on condition option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.164470" elapsed="0.533621"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify condtion page" owner="Informationmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:27.699122" level="INFO">Verifying element 'xpath://a[text()="Conditions of Use"]' contains exact text 'Conditions of Use'.</msg>
+<arg>${condition_l}</arg>
+<arg>Conditions of Use</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.699122" elapsed="0.032946"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:27.699122" elapsed="0.032946"/>
+</kw>
+<arg>Informationmoduleresource.To verify condtion page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.699122" elapsed="0.032946"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:27.164470" elapsed="0.567598"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:27.735937" elapsed="2.254461"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:27.735120" elapsed="2.255278"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:19:21.897439" elapsed="8.092959"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-28T16:19:21.886932" elapsed="8.108709"/>
+</suite>
+<suite id="s1-s12" name="TestInformationmodulecondition" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmodulecondition.robot">
+<test id="s1-s12-t1" name="Verifying for Privacy Condition page" line="16">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:30.010614" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:30.010614" elapsed="1.642010"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:31.656283" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:31.655071" elapsed="3.341656"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:34.996727" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:30.010614" elapsed="4.986113"/>
+</kw>
+<kw name="To assert the Privacy Condition page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on condition option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:35.061172" level="INFO">Clicking link 'xpath://a[text()="Conditions of Use"]'.</msg>
+<arg>${condition_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:35.061172" elapsed="0.569338"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${condition_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:35.061172" elapsed="0.571809"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:35.061172" elapsed="0.572800"/>
+</kw>
+<arg>Informationmoduleresource.To click on condition option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:35.002263" elapsed="0.631836"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify condtion page" owner="Informationmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:35.635119" level="INFO">Verifying element 'xpath://a[text()="Conditions of Use"]' contains exact text 'Conditions of Use'.</msg>
+<arg>${condition_l}</arg>
+<arg>Conditions of Use</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:19:35.635119" elapsed="0.030962"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:35.634099" elapsed="0.034521"/>
+</kw>
+<arg>Informationmoduleresource.To verify condtion page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:35.634099" elapsed="0.035256"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:35.002263" elapsed="0.667092"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:35.671497" elapsed="2.226800"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:35.669355" elapsed="2.228942"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:19:30.010614" elapsed="7.887683"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-28T16:19:30.002583" elapsed="7.895714"/>
+</suite>
+<suite id="s1-s13" name="TestInformationmodulecontactus" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmodulecontactus.robot">
+<test id="s1-s13-t1" name="Verifying for contact us page" line="16">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:37.914266" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.914266" elapsed="1.651874"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:39.566140" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:39.566140" elapsed="3.248011"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:42.814151" elapsed="0.008101"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:37.914266" elapsed="4.908728"/>
+</kw>
+<kw name="To assert the contact us page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on condition option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:42.822994" level="INFO">Clicking link 'xpath://a[text()="Conditions of Use"]'.</msg>
+<arg>${condition_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:42.822994" elapsed="0.571929"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${condition_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:42.822994" elapsed="0.574512"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:42.822994" elapsed="0.575166"/>
+</kw>
+<arg>Informationmoduleresource.To click on condition option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:42.822994" elapsed="0.575250"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify condtion page" owner="Informationmoduleresource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:43.398244" level="INFO">Verifying element 'xpath://a[text()="Conditions of Use"]' contains exact text 'Conditions of Use'.</msg>
+<arg>${condition_l}</arg>
+<arg>Conditions of Use</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:19:43.398244" elapsed="0.033689"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:43.398244" elapsed="0.033689"/>
+</kw>
+<arg>Informationmoduleresource.To verify condtion page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:43.398244" elapsed="0.033689"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:42.822994" elapsed="0.608939"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:43.435738" elapsed="2.209242"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:43.431933" elapsed="2.213047"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:19:37.914266" elapsed="7.730714"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-28T16:19:37.898297" elapsed="7.746683"/>
+</suite>
+<suite id="s1-s14" name="TestInformationmoduleprivacy" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleprivacy.robot">
+<test id="s1-s14-t1" name="Verifying for Privacy notice page" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:45.660607" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:45.660607" elapsed="1.663268"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:47.323875" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:47.323875" elapsed="4.034126"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.358001" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:45.660607" elapsed="5.705425"/>
+</kw>
+<kw name="To assert the Privacy notice page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on privacy option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:51.368222" level="INFO">Clicking link 'xpath://a[text()="Privacy Notice"]'.</msg>
+<arg>${privacy_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.368222" elapsed="0.545739"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${privacy_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.368222" elapsed="0.547298"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:51.368222" elapsed="0.548850"/>
+</kw>
+<arg>Informationmoduleresource.To click on privacy option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.368222" elapsed="0.548937"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify privacy page" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:51.918920" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Privacy policy'.</msg>
+<arg>${pagetitle}</arg>
+<arg>Privacy policy</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.918920" elapsed="0.035679"/>
+</kw>
+<arg>Element Text Should Be</arg>
+<arg>${pagetitle}</arg>
+<arg>Privacy policy</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.918629" elapsed="0.038003"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:51.917568" elapsed="0.039064"/>
+</kw>
+<arg>Informationmoduleresource.To verify privacy page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.917568" elapsed="0.040572"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:51.368222" elapsed="0.589918"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:51.958140" elapsed="2.231373"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:51.958140" elapsed="2.231373"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:19:45.660607" elapsed="8.528906"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-28T16:19:45.644980" elapsed="8.552720"/>
+</suite>
+<suite id="s1-s15" name="TestInformationmoduleshipping" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleshipping.robot">
+<test id="s1-s15-t1" name="Verifying for shipping and return page" line="14">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:54.209503" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:19:54.208984" elapsed="1.660475"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:55.871332" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:19:55.871332" elapsed="3.080012"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:19:58.952620" elapsed="0.003506"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:54.205206" elapsed="4.750920"/>
+</kw>
+<kw name="To assert the shipping and return page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on shipping option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:58.956126" level="INFO">Clicking link 'xpath://a[text()="Shipping &amp; Returns"]'.</msg>
+<arg>${shipping_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:19:58.956126" elapsed="0.589750"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${shipping_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:58.956126" elapsed="0.592009"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:58.956126" elapsed="0.592693"/>
+</kw>
+<arg>Informationmoduleresource.To click on shipping option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:58.956126" elapsed="0.592693"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify shipping page" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:19:59.549511" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Shipping &amp; Returns'.</msg>
+<arg>${pagetitle}</arg>
+<arg>Shipping &amp; Returns</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:19:59.549511" elapsed="0.033577"/>
+</kw>
+<arg>Element Text Should Be</arg>
+<arg>${pagetitle}</arg>
+<arg>Shipping &amp; Returns</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:59.549511" elapsed="0.034583"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:59.549511" elapsed="0.034583"/>
+</kw>
+<arg>Informationmoduleresource.To verify shipping page</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:19:59.549511" elapsed="0.034583"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:58.956126" elapsed="0.627968"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:19:59.587142" elapsed="2.236317"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:59.587142" elapsed="2.236317"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:19:54.205206" elapsed="7.618253"/>
+</test>
+<doc>Test case to click shipping and return page</doc>
+<status status="PASS" start="2024-05-28T16:19:54.197700" elapsed="7.634744"/>
+</suite>
+<suite id="s1-s16" name="TestInformationmodulesitemap" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmodulesitemap.robot">
+<test id="s1-s16-t1" name="Verifying for site map page" line="15">
+<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:01.847494" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:20:01.847494" elapsed="1.635518"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:03.485679" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:20:03.485679" elapsed="3.318358"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:20:06.805641" elapsed="0.001937"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:01.841104" elapsed="4.966474"/>
+</kw>
+<kw name="To assert the site map page">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on sitemap option" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:06.811298" level="INFO">Clicking link 'xpath://a[text()="Sitemap"]'.</msg>
+<arg>${sitemap_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:20:06.811298" elapsed="0.814337"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${sitemap_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:06.811298" elapsed="0.817084"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:06.807578" elapsed="0.821480"/>
+</kw>
+<arg>Informationmoduleresource.To click on sitemap option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:06.807578" elapsed="0.821480"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To verify sitepage" owner="Informationmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:07.629058" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Sitemap'.</msg>
+<arg>${pagetitle}</arg>
+<arg>Sitemap</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:20:07.629058" elapsed="0.029290"/>
+</kw>
+<arg>Element Text Should Be</arg>
+<arg>${pagetitle}</arg>
+<arg>Sitemap</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:07.629058" elapsed="0.036556"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:07.629058" elapsed="0.036556"/>
+</kw>
+<arg>Informationmoduleresource.To verify sitepage</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:07.629058" elapsed="0.036556"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:07.666618" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:20:07.666618" elapsed="0.933393"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:07.666618" elapsed="0.935343"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:07.666618" elapsed="0.935343"/>
+</kw>
+<arg>bookmoduleresource.To click book option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:07.666618" elapsed="0.935343"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click book option" owner="bookmoduleresource">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:08.604886" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<arg>${book_l}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:20:08.604886" elapsed="0.518458"/>
+</kw>
+<arg>Click Link</arg>
+<arg>${book_l}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:08.604658" elapsed="0.520896"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:08.603566" elapsed="0.521988"/>
+</kw>
+<arg>bookmoduleresource.To click book option</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-05-28T16:20:08.603566" elapsed="0.521988"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:06.807578" elapsed="2.317976"/>
+</kw>
+<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:20:09.128215" elapsed="2.224479"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:09.128215" elapsed="2.224479"/>
+</kw>
+<tag>smoketest</tag>
+<status status="PASS" start="2024-05-28T16:20:01.841104" elapsed="9.511590"/>
+</test>
+<doc>Test case for sitemap page</doc>
+<status status="PASS" start="2024-05-28T16:20:01.835794" elapsed="9.516900"/>
+</suite>
+<status status="PASS" start="2024-05-28T16:17:51.224499" elapsed="140.128195"/>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">Regression test</stat>
+<stat pass="1" fail="0" skip="0">retest</stat>
+<stat pass="9" fail="0" skip="0">smoketest</stat>
+</tag>
+<suite>
+<stat pass="16" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmoduleaddtocart">TestCase.TestBookmoduleaddtocart</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="TestBookmoduleclickproduct">TestCase.TestBookmoduleclickproduct</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="TestBookmoduledisplay">TestCase.TestBookmoduledisplay</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="TestBookmodulefilterprice">TestCase.TestBookmodulefilterprice</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="TestBookmoduleremovefilter">TestCase.TestBookmoduleremovefilter</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="TestBookmoduleremoveproduct">TestCase.TestBookmoduleremoveproduct</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s7" name="TestBookmoduleshoppincart">TestCase.TestBookmoduleshoppincart</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s8" name="TestBookmodulesortby">TestCase.TestBookmodulesortby</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s9" name="TestBookmodulesortbyprice">TestCase.TestBookmodulesortbyprice</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s10" name="TestBookmoduleview">TestCase.TestBookmoduleview</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s11" name="TestInformationmoduleaboutus">TestCase.TestInformationmoduleaboutus</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s12" name="TestInformationmodulecondition">TestCase.TestInformationmodulecondition</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s13" name="TestInformationmodulecontactus">TestCase.TestInformationmodulecontactus</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s14" name="TestInformationmoduleprivacy">TestCase.TestInformationmoduleprivacy</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s15" name="TestInformationmoduleshipping">TestCase.TestInformationmoduleshipping</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s16" name="TestInformationmodulesitemap">TestCase.TestInformationmodulesitemap</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,19 +1,14 @@
 ==============================================================================
-Git Own Repo                                                                  
+TestCase                                                                      
 ==============================================================================
-Git Own Repo.TestCase                                                         
+TestCase.TestInformationmoduleprivacy :: Test case for sitemap page           
 ==============================================================================
-Git Own Repo.TestCase.TestInformationmodulecondition :: Test case for sitem...
-==============================================================================
-Verifying for Privacy Condition page                                  | PASS |
+Verifying for Privacy notice page                                     | PASS |
 ------------------------------------------------------------------------------
-Git Own Repo.TestCase.TestInformationmodulecondition :: Test case ... | PASS |
+TestCase.TestInformationmoduleprivacy :: Test case for sitemap page   | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
-Git Own Repo.TestCase                                                 | PASS |
-1 test, 1 passed, 0 failed
-==============================================================================
-Git Own Repo                                                          | PASS |
+TestCase                                                              | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\11\output.xml

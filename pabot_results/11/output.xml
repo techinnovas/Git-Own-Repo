@@ -1,83 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:38.393622" rpa="false" schemaversion="5">
-<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
-<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1-s1" name="TestInformationmodulecondition" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmodulecondition.robot">
-<test id="s1-s1-s1-t1" name="Verifying for Privacy Condition page" line="16">
-<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:38.873996" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>${browser}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T09:40:38.873996" elapsed="5.177650"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:44.051646" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:08:59.685443" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestInformationmoduleprivacy" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleprivacy.robot">
+<test id="s1-s1-t1" name="Verifying for Privacy notice page" line="16">
+<kw name="Open the Browser" owner="GenericResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-02T15:09:00.212864" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T09:40:44.051646" elapsed="1.736781"/>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-02T15:09:00.212864" elapsed="9.404130"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-02T15:09:09.619511" elapsed="0.636240"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
+<arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-28T09:40:45.788484" elapsed="0.029258"/>
+<status status="PASS" start="2024-06-02T15:09:10.255751" elapsed="0.032506"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:38.873996" elapsed="6.944850"/>
+<status status="PASS" start="2024-06-02T15:09:00.212864" elapsed="10.075393"/>
 </kw>
-<kw name="To assert the Privacy Condition page">
+<kw name="To assert the Privacy notice page">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="To click on condition option" owner="Informationmoduleresource">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on privacy option" owner="Informationmoduleresource">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:45.824147" level="INFO">Clicking link 'xpath://a[text()="Conditions of Use"]'.</msg>
-<arg>${condition_l}</arg>
+<msg time="2024-06-02T15:09:10.296274" level="INFO">Clicking link 'xpath://a[text()="Privacy Notice"]'.</msg>
+<arg>${privacy_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:40:45.823043" elapsed="3.563039"/>
+<status status="PASS" start="2024-06-02T15:09:10.296274" elapsed="1.551892"/>
 </kw>
-<arg>Click Link</arg>
-<arg>${condition_l}</arg>
+<status status="PASS" start="2024-06-02T15:09:10.294767" elapsed="1.553399"/>
+</kw>
+<arg>Informationmoduleresource.To click on privacy option</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:40:45.822039" elapsed="3.569027"/>
-</kw>
-<status status="PASS" start="2024-05-28T09:40:45.821950" elapsed="3.569116"/>
-</kw>
-<arg>Informationmoduleresource.To click on condition option</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:40:45.820898" elapsed="3.570168"/>
+<status status="PASS" start="2024-06-02T15:09:10.294767" elapsed="1.553399"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="To verify condtion page" owner="Informationmoduleresource">
+<kw name="To verify privacy page" owner="Informationmoduleresource">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:49.393573" level="INFO">Verifying element 'xpath://a[text()="Conditions of Use"]' contains exact text 'Conditions of Use'.</msg>
-<arg>${condition_l}</arg>
-<arg>Conditions of Use</arg>
+<msg time="2024-06-02T15:09:11.848166" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Privacy policy'.</msg>
+<arg>${pagetitle}</arg>
+<arg>Privacy policy</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T09:40:49.393573" elapsed="0.137321"/>
+<status status="PASS" start="2024-06-02T15:09:11.848166" elapsed="0.520420"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:49.391066" elapsed="0.139828"/>
+<status status="PASS" start="2024-06-02T15:09:11.848166" elapsed="0.520420"/>
 </kw>
-<arg>Informationmoduleresource.To verify condtion page</arg>
+<arg>Informationmoduleresource.To verify privacy page</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:40:49.391066" elapsed="0.139828"/>
+<status status="PASS" start="2024-06-02T15:09:11.848166" elapsed="0.520420"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:45.819851" elapsed="3.711043"/>
+<status status="PASS" start="2024-06-02T15:09:10.294767" elapsed="2.073819"/>
 </kw>
-<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T09:40:49.530894" elapsed="4.663611"/>
+<status status="PASS" start="2024-06-02T15:09:12.373096" elapsed="4.922248"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:49.530894" elapsed="4.663611"/>
+<status status="PASS" start="2024-06-02T15:09:12.373096" elapsed="4.922248"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-05-28T09:40:38.873996" elapsed="15.320509"/>
+<status status="PASS" start="2024-06-02T15:09:00.199271" elapsed="17.096073"/>
 </test>
 <doc>Test case for sitemap page</doc>
-<status status="PASS" start="2024-05-28T09:40:38.473482" elapsed="15.724136"/>
+<status status="PASS" start="2024-06-02T15:08:59.782580" elapsed="17.514143"/>
 </suite>
-<status status="PASS" start="2024-05-28T09:40:38.473482" elapsed="15.724136"/>
-</suite>
-<status status="PASS" start="2024-05-28T09:40:38.443834" elapsed="15.753784"/>
+<status status="PASS" start="2024-06-02T15:08:59.745739" elapsed="17.551558"/>
 </suite>
 <statistics>
 <total>
@@ -87,9 +77,8 @@
 <stat pass="1" fail="0" skip="0">smoketest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestInformationmodulecondition">Git Own Repo.TestCase.TestInformationmodulecondition</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestInformationmoduleprivacy">TestCase.TestInformationmoduleprivacy</stat>
 </suite>
 </statistics>
 <errors>

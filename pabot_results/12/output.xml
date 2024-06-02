@@ -1,83 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:59.139047" rpa="false" schemaversion="5">
-<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
-<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1-s1" name="TestInformationmodulecontactus" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmodulecontactus.robot">
-<test id="s1-s1-s1-t1" name="Verifying for contact us page" line="16">
-<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:59.483191" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>${browser}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T09:40:59.483191" elapsed="1.773100"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:41:01.256357" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:09:01.514458" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestInformationmoduleshipping" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleshipping.robot">
+<test id="s1-s1-t1" name="Verifying for shipping and return page" line="15">
+<kw name="Open the Browser" owner="GenericResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-02T15:09:01.844413" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T09:41:01.256357" elapsed="34.325428"/>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-02T15:09:01.844413" elapsed="14.481961"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-02T15:09:16.326374" elapsed="0.048060"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
+<arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-28T09:41:35.585887" elapsed="0.001929"/>
+<status status="PASS" start="2024-06-02T15:09:16.374434" elapsed="0.004507"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:59.481529" elapsed="36.106287"/>
+<status status="PASS" start="2024-06-02T15:09:01.844413" elapsed="14.536059"/>
 </kw>
-<kw name="To assert the contact us page">
+<kw name="To assert the shipping and return page">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="To click on condition option" owner="Informationmoduleresource">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="To click on shipping option" owner="Informationmoduleresource">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:41:35.591402" level="INFO">Clicking link 'xpath://a[text()="Conditions of Use"]'.</msg>
-<arg>${condition_l}</arg>
+<msg time="2024-06-02T15:09:16.383300" level="INFO">Clicking link 'xpath://a[text()="Shipping &amp; Returns"]'.</msg>
+<arg>${shipping_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:41:35.589822" elapsed="1.599397"/>
+<status status="PASS" start="2024-06-02T15:09:16.382480" elapsed="1.550232"/>
 </kw>
-<arg>Click Link</arg>
-<arg>${condition_l}</arg>
+<status status="PASS" start="2024-06-02T15:09:16.380472" elapsed="1.552240"/>
+</kw>
+<arg>Informationmoduleresource.To click on shipping option</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:41:35.589822" elapsed="1.599397"/>
-</kw>
-<status status="PASS" start="2024-05-28T09:41:35.589822" elapsed="1.599397"/>
-</kw>
-<arg>Informationmoduleresource.To click on condition option</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:41:35.587816" elapsed="1.601403"/>
+<status status="PASS" start="2024-06-02T15:09:16.380472" elapsed="1.552240"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="To verify condtion page" owner="Informationmoduleresource">
+<kw name="To verify shipping page" owner="Informationmoduleresource">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:41:37.191706" level="INFO">Verifying element 'xpath://a[text()="Conditions of Use"]' contains exact text 'Conditions of Use'.</msg>
-<arg>${condition_l}</arg>
-<arg>Conditions of Use</arg>
+<msg time="2024-06-02T15:09:17.932712" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Shipping &amp; Returns'.</msg>
+<arg>${pagetitle}</arg>
+<arg>Shipping &amp; Returns</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T09:41:37.191706" elapsed="0.028161"/>
+<status status="PASS" start="2024-06-02T15:09:17.932712" elapsed="0.030761"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:41:37.191158" elapsed="0.032763"/>
+<status status="PASS" start="2024-06-02T15:09:17.932712" elapsed="0.030761"/>
 </kw>
-<arg>Informationmoduleresource.To verify condtion page</arg>
+<arg>Informationmoduleresource.To verify shipping page</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:41:37.190266" elapsed="0.033655"/>
+<status status="PASS" start="2024-06-02T15:09:17.932712" elapsed="0.030761"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:41:35.587816" elapsed="1.636105"/>
+<status status="PASS" start="2024-06-02T15:09:16.380472" elapsed="1.583001"/>
 </kw>
-<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T09:41:37.225189" elapsed="2.233125"/>
+<status status="PASS" start="2024-06-02T15:09:17.966559" elapsed="2.185239"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:41:37.223921" elapsed="2.234393"/>
+<status status="PASS" start="2024-06-02T15:09:17.966559" elapsed="2.185239"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-05-28T09:40:59.481529" elapsed="39.976785"/>
+<status status="PASS" start="2024-06-02T15:09:01.844413" elapsed="18.307385"/>
 </test>
-<doc>Test case for sitemap page</doc>
-<status status="PASS" start="2024-05-28T09:40:59.198474" elapsed="40.261855"/>
+<doc>Test case to click shipping and return page</doc>
+<status status="PASS" start="2024-06-02T15:09:01.553354" elapsed="18.598444"/>
 </suite>
-<status status="PASS" start="2024-05-28T09:40:59.196960" elapsed="40.263369"/>
-</suite>
-<status status="PASS" start="2024-05-28T09:40:59.167015" elapsed="40.293314"/>
+<status status="PASS" start="2024-06-02T15:09:01.532558" elapsed="18.619240"/>
 </suite>
 <statistics>
 <total>
@@ -87,9 +77,8 @@
 <stat pass="1" fail="0" skip="0">smoketest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestInformationmodulecontactus">Git Own Repo.TestCase.TestInformationmodulecontactus</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestInformationmoduleshipping">TestCase.TestInformationmoduleshipping</stat>
 </suite>
 </statistics>
 <errors>

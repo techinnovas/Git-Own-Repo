@@ -1,95 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:38.384601" rpa="false" schemaversion="5">
-<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
-<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1-s1" name="TestBookmoduleremoveproduct" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremoveproduct.robot">
-<test id="s1-s1-s1-t1" name="To remove the product from shopping cart" line="14">
-<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:38.855952" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>${browser}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T09:40:38.848934" elapsed="6.192870"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:45.047594" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:08:59.716041" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmodulesortby" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortby.robot">
+<test id="s1-s1-t1" name="To verify sorting functionality" line="13">
+<kw name="Open the Browser" owner="GenericResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-02T15:09:00.257213" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T09:40:45.046539" elapsed="4.428087"/>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-02T15:09:00.257213" elapsed="9.300213"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-02T15:09:09.565436" elapsed="0.690315"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
+<arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-28T09:40:49.484717" elapsed="0.006164"/>
+<status status="PASS" start="2024-06-02T15:09:10.255751" elapsed="0.032506"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:38.848934" elapsed="10.649954"/>
+<status status="PASS" start="2024-06-02T15:09:00.257213" elapsed="10.031044"/>
 </kw>
-<kw name="To remove the product from the shopping cart">
+<kw name="To verify sorting by selecting &quot;A-Z&quot; option">
 <kw name="To click book option" owner="bookmoduleresource">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<try>
+<branch type="TRY">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:49.498888" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-06-02T15:09:10.296274" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:40:49.498888" elapsed="2.046295"/>
+<status status="PASS" start="2024-06-02T15:09:10.296274" elapsed="2.256467"/>
 </kw>
-<arg>Click Link</arg>
-<arg>${book_l}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:40:49.498888" elapsed="2.046295"/>
+<status status="PASS" start="2024-06-02T15:09:10.296274" elapsed="2.256467"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Error clicking book option: ${book_l}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-06-02T15:09:12.552741" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:49.498888" elapsed="2.046295"/>
+<status status="NOT RUN" start="2024-06-02T15:09:12.552741" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-06-02T15:09:10.296274" elapsed="2.256467"/>
+</try>
+<status status="PASS" start="2024-06-02T15:09:10.294767" elapsed="2.257974"/>
 </kw>
-<kw name="click on add to card button" owner="bookmoduleresource">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:51.545183" level="INFO">Clicking element 'xpath:(//input[@class="button-2 product-box-add-to-cart-button"])[1]'.</msg>
-<arg>${addtocard_l}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:40:51.545183" elapsed="0.218728"/>
+<kw name="click on sortbyoption" owner="bookmoduleresource">
+<try>
+<branch type="TRY">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-06-02T15:09:12.552741" level="INFO">Selecting options from selection list 'id:products-orderby' by index 1.</msg>
+<arg>${position_l}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-06-02T15:09:12.552741" elapsed="1.783840"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:51.545183" elapsed="0.218728"/>
+<status status="PASS" start="2024-06-02T15:09:12.552741" elapsed="1.783840"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Error clicking sortby option: ${position_l}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-06-02T15:09:14.336581" elapsed="0.000000"/>
 </kw>
-<kw name="click on shopping cart button" owner="bookmoduleresource">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:51.772466" level="INFO">Clicking link 'javascript:document.querySelector('a.ico-cart &gt; span')'.</msg>
-<msg time="2024-05-28T09:41:02.071527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-28T09:41:02.079534" level="FAIL">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</msg>
-<arg>${shopping_cardbutton_l}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="FAIL" start="2024-05-28T09:40:51.763911" elapsed="10.315623">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
+<status status="NOT RUN" start="2024-06-02T15:09:14.336581" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-06-02T15:09:12.552741" elapsed="1.783840"/>
+</try>
+<status status="PASS" start="2024-06-02T15:09:12.552741" elapsed="1.783840"/>
 </kw>
-<status status="FAIL" start="2024-05-28T09:40:51.763911" elapsed="10.315623">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
+<status status="PASS" start="2024-06-02T15:09:10.294767" elapsed="4.041814"/>
 </kw>
-<status status="FAIL" start="2024-05-28T09:40:49.498888" elapsed="12.580646">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
-</kw>
-<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T09:41:02.079534" elapsed="2.366530"/>
+<status status="PASS" start="2024-06-02T15:09:14.336581" elapsed="4.730393"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:41:02.079534" elapsed="2.366530"/>
+<status status="PASS" start="2024-06-02T15:09:14.336581" elapsed="4.730393"/>
 </kw>
 <tag>Regressiontest</tag>
-<status status="FAIL" start="2024-05-28T09:40:38.848934" elapsed="25.597130">Link with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
+<status status="PASS" start="2024-06-02T15:09:00.252705" elapsed="18.814269"/>
 </test>
-<doc>Test case for Bookmodule</doc>
-<status status="FAIL" start="2024-05-28T09:40:38.438310" elapsed="26.008910"/>
+<doc>Test case for Bookmodule to sortby</doc>
+<status status="PASS" start="2024-06-02T15:08:59.782580" elapsed="19.284394"/>
 </suite>
-<status status="FAIL" start="2024-05-28T09:40:38.437303" elapsed="26.012637"/>
-</suite>
-<status status="FAIL" start="2024-05-28T09:40:38.393622" elapsed="26.056318"/>
+<status status="PASS" start="2024-06-02T15:08:59.747315" elapsed="19.319659"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Regressiontest</stat>
+<stat pass="1" fail="0" skip="0">Regressiontest</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="TestBookmoduleremoveproduct">Git Own Repo.TestCase.TestBookmoduleremoveproduct</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmodulesortby">TestCase.TestBookmodulesortby</stat>
 </suite>
 </statistics>
 <errors>

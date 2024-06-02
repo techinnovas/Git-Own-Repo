@@ -1,79 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T23:50:22.472070" rpa="false" schemaversion="5">
-<suite id="s1" name="TestBookmoduleshoppincart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot">
-<test id="s1-t1" name="To verify shopping cart option" line="14">
-<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-27T23:50:22.644205" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>${browser}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-27T23:50:22.629853" elapsed="1.326906"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-27T23:50:23.957261" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T19:12:16.780837" rpa="false" schemaversion="5">
+<suite id="s1" name="TestBookmoduleclickshoppingcart" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleclickshoppingcart.robot">
+<test id="s1-t1" name="Login test template" line="18">
+<kw name="Open the Browser" owner="GenericResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-02T19:12:18.071361" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-27T23:50:23.956759" elapsed="3.474220"/>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-02T19:12:18.071361" elapsed="5.234965"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-02T19:12:23.306326" elapsed="0.049947"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
+<arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-27T23:50:27.431985" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-02T19:12:23.356273" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:50:22.629853" elapsed="4.802132"/>
+<status status="PASS" start="2024-06-02T19:12:18.070855" elapsed="5.285418"/>
 </kw>
-<kw name="To click and validate shopping cart option">
-<kw name="click on shopping cart button" owner="bookmoduleresource">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Login postive testcase1">
+<kw name=" Click on login element" owner="Loginresourcebook">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-27T23:50:27.434649" level="INFO">Clicking element 'javascript:document.querySelector('a.ico-cart &gt; span')'.</msg>
-<msg time="2024-05-27T23:50:37.640068" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-27T23:50:37.640068" level="FAIL">Element with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</msg>
-<arg>${shopping_cardbutton_l}</arg>
+<msg time="2024-06-02T19:12:23.364704" level="INFO">Clicking element 'xpath=//a[text()='Log in']'.</msg>
+<arg>${login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-05-27T23:50:27.433441" elapsed="10.209563">Element with locator 'javascript:document.querySelector('a.ico-cart &gt; span')' not found.</status>
+<status status="PASS" start="2024-06-02T19:12:23.364704" elapsed="0.580324"/>
 </kw>
-<arg>Click Element</arg>
-<arg>${shopping_cardbutton_l}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-27T23:50:27.433441" elapsed="10.209563"/>
+<status status="PASS" start="2024-06-02T19:12:23.364704" elapsed="0.580324"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:50:27.433441" elapsed="10.209776"/>
+<kw name=" Fill Login credentials" owner="Loginresourcebook">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-02T19:12:23.945028" level="INFO">Typing text 'jsuriy@gmail.com' into text field 'xpath=//input[@class='email']'.</msg>
+<arg>${email}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T19:12:23.945028" elapsed="0.147397"/>
 </kw>
-<kw name="Asserting shopping cart page" owner="bookmoduleresource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-02T19:12:24.092425" level="INFO">Typing text 'Suriy@07' into text field 'xpath=//input[@class='password']'.</msg>
+<arg>${passwords}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T19:12:24.092425" elapsed="0.145742"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-06-02T19:12:23.945028" elapsed="0.294307"/>
+</kw>
+<kw name=" Click the login button" owner="Loginresourcebook">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-02T19:12:24.240853" level="INFO">Clicking element 'xpath=//input[@class='button-1 login-button']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T19:12:24.239335" elapsed="0.952822"/>
+</kw>
+<status status="PASS" start="2024-06-02T19:12:24.239335" elapsed="0.954495"/>
+</kw>
+<kw name=" Check the login page message" owner="Loginresourcebook">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-27T23:50:37.643217" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Shopping cart'.</msg>
+<msg time="2024-06-02T19:12:25.196136" level="INFO">Verifying element 'xpath=//a[text()='jsuriy@gmail.com']' contains exact text 'jsuriy@gmail.com'.</msg>
+<arg>${login_msg}</arg>
+<arg>${username}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-02T19:12:25.193830" elapsed="0.044064"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-06-02T19:12:25.193830" elapsed="0.044064"/>
+</kw>
+<kw name="click on shopping cart button" owner="bookmoduleresource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${click_shoppingcart}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-02T19:12:25.237894" elapsed="0.033986"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-02T19:12:25.271880" level="INFO">Clicking link 'xpath:(//a[@class="ico-cart"])[1]'.</msg>
+<arg>${click_shoppingcart}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T19:12:25.271880" elapsed="0.722660"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>${verify_shopping}</arg>
 <arg>Shopping cart</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-27T23:50:37.643217" elapsed="1.517999"/>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-06-02T19:12:25.994540" elapsed="0.026962"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:50:37.643217" elapsed="1.517999"/>
+<status status="PASS" start="2024-06-02T19:12:25.237894" elapsed="0.787093"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:50:27.433441" elapsed="11.727775"/>
+<arg>username=jsuriy@gmail.com</arg>
+<arg>password=Suriy@07</arg>
+<status status="PASS" start="2024-06-02T19:12:23.364704" elapsed="2.660283"/>
 </kw>
-<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-27T23:50:39.162219" elapsed="2.159155"/>
+<status status="PASS" start="2024-06-02T19:12:26.025493" elapsed="2.335937"/>
 </kw>
-<status status="PASS" start="2024-05-27T23:50:39.162219" elapsed="2.159155"/>
+<status status="PASS" start="2024-06-02T19:12:26.025493" elapsed="2.335937"/>
 </kw>
-<tag>Regressiontest</tag>
-<status status="PASS" start="2024-05-27T23:50:22.629853" elapsed="18.691521"/>
+<status status="PASS" start="2024-06-02T19:12:18.059384" elapsed="10.302046"/>
 </test>
-<doc>Test case for Bookmodule</doc>
-<status status="PASS" start="2024-05-27T23:50:22.476542" elapsed="18.844832"/>
+<doc>Test the Valid information to the login page</doc>
+<status status="PASS" start="2024-06-02T19:12:16.795849" elapsed="11.565581"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Regressiontest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestBookmoduleshoppincart">TestBookmoduleshoppincart</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestBookmoduleclickshoppingcart">TestBookmoduleclickshoppingcart</stat>
 </suite>
 </statistics>
 <errors>

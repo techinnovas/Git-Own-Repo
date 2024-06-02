@@ -1,19 +1,14 @@
 ==============================================================================
-Git Own Repo                                                                  
+TestCase                                                                      
 ==============================================================================
-Git Own Repo.TestCase                                                         
+TestCase.TestInformationmoduleaboutus :: Test case for sitemap page for Ver...
 ==============================================================================
-Git Own Repo.TestCase.TestBookmodulesortbyprice :: Test case for Bookmodule   
-==============================================================================
-To verify sort the product by price                                   | PASS |
+Verifying for about us page                                           | PASS |
 ------------------------------------------------------------------------------
-Git Own Repo.TestCase.TestBookmodulesortbyprice :: Test case for B... | PASS |
+TestCase.TestInformationmoduleaboutus :: Test case for sitemap pag... | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
-Git Own Repo.TestCase                                                 | PASS |
-1 test, 1 passed, 0 failed
-==============================================================================
-Git Own Repo                                                          | PASS |
+TestCase                                                              | PASS |
 1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\8\output.xml

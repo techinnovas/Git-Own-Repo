@@ -1,91 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T09:40:38.505343" rpa="false" schemaversion="5">
-<suite id="s1" name="Git Own Repo" source="E:\EXPLEO\Git Own Repo">
-<suite id="s1-s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
-<suite id="s1-s1-s1" name="TestBookmoduleremovefilter" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremovefilter.robot">
-<test id="s1-s1-s1-t1" name="To verify for removing filter price option" line="15">
-<kw name="Open a browser with url" owner="Genericresource" type="SETUP">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:38.999873" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>${browser}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-05-28T09:40:38.999873" elapsed="8.058240"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:47.059755" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:08:59.716041" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmoduleremovefilter" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleremovefilter.robot">
+<test id="s1-s1-t1" name="To verify for removing filter price option" line="14">
+<kw name="Open the Browser" owner="GenericResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-02T15:09:00.257213" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-28T09:40:47.059151" elapsed="4.857016"/>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-02T15:09:00.257213" elapsed="7.490978"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-02T15:09:07.748191" elapsed="2.820435"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
+<arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-28T09:40:51.916167" elapsed="0.008001"/>
+<status status="PASS" start="2024-06-02T15:09:10.568626" elapsed="0.008016"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:38.999873" elapsed="12.924295"/>
+<status status="PASS" start="2024-06-02T15:09:00.252705" elapsed="10.323937"/>
 </kw>
 <kw name="To verify remove filter option">
 <kw name="To click book option" owner="bookmoduleresource">
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<try>
+<branch type="TRY">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:51.932174" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-06-02T15:09:10.576642" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:40:51.932174" elapsed="3.111803"/>
+<status status="PASS" start="2024-06-02T15:09:10.576642" elapsed="1.950431"/>
 </kw>
-<arg>Click Link</arg>
-<arg>${book_l}</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-05-28T09:40:51.932174" elapsed="3.111803"/>
+<status status="PASS" start="2024-06-02T15:09:10.576642" elapsed="1.950431"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Error clicking book option: ${book_l}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-06-02T15:09:12.535080" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:51.932174" elapsed="3.111803"/>
+<status status="NOT RUN" start="2024-06-02T15:09:12.535080" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-06-02T15:09:10.576642" elapsed="1.958438"/>
+</try>
+<status status="PASS" start="2024-06-02T15:09:10.576642" elapsed="1.958438"/>
 </kw>
 <kw name="click on filter button" owner="bookmoduleresource">
+<try>
+<branch type="TRY">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:55.050157" level="INFO">Clicking element '(//span[text()="50.00"])[2]'.</msg>
+<msg time="2024-06-02T15:09:12.535080" level="INFO">Clicking element '(//span[text()="50.00"])[2]'.</msg>
 <arg>${pricefilter_l}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:40:55.043977" elapsed="1.257909"/>
+<status status="PASS" start="2024-06-02T15:09:12.535080" elapsed="2.133721"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:55.043977" elapsed="1.257909"/>
+<status status="PASS" start="2024-06-02T15:09:12.535080" elapsed="2.133721"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Error clicking filter button: ${pricefilter_l}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-06-02T15:09:14.668801" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-06-02T15:09:14.668801" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-06-02T15:09:12.535080" elapsed="2.133721"/>
+</try>
+<status status="PASS" start="2024-06-02T15:09:12.535080" elapsed="2.133721"/>
 </kw>
 <kw name="click on remove filter" owner="bookmoduleresource">
+<try>
+<branch type="TRY">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:56.303390" level="INFO">Clicking element 'xpath://a[text()="Remove Filter"]'.</msg>
+<msg time="2024-06-02T15:09:14.672821" level="INFO">Clicking element 'xpath://a[text()="Remove Filter"]'.</msg>
 <arg>${removefilter_l}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-28T09:40:56.303390" elapsed="1.012716"/>
+<status status="PASS" start="2024-06-02T15:09:14.672821" elapsed="0.629900"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:56.303390" elapsed="1.012716"/>
+<status status="PASS" start="2024-06-02T15:09:14.672821" elapsed="0.629900"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Error clicking remove filter: ${removefilter_l}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-06-02T15:09:15.302721" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-06-02T15:09:15.302721" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-06-02T15:09:14.672821" elapsed="0.629900"/>
+</try>
+<status status="PASS" start="2024-06-02T15:09:14.668801" elapsed="0.633920"/>
 </kw>
 <kw name="Asserting remove filter option" owner="bookmoduleresource">
+<try>
+<branch type="TRY">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-28T09:40:57.319818" level="INFO">Verifying element '(//span[text()="50.00"])[2]' contains exact text '50.00'.</msg>
+<msg time="2024-06-02T15:09:15.309445" level="INFO">Verifying element '(//span[text()="50.00"])[2]' contains exact text '50.00'.</msg>
 <arg>${pricefilter_l}</arg>
 <arg>50.00</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-28T09:40:57.319818" elapsed="0.021102"/>
+<status status="PASS" start="2024-06-02T15:09:15.302721" elapsed="0.052093"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:57.316106" elapsed="0.024814"/>
+<status status="PASS" start="2024-06-02T15:09:15.302721" elapsed="0.052093"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Error asserting remove filter option: ${pricefilter_l}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-06-02T15:09:15.354814" elapsed="0.002371"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:51.924168" elapsed="5.416752"/>
+<status status="NOT RUN" start="2024-06-02T15:09:15.354814" elapsed="0.002371"/>
+</branch>
+<status status="PASS" start="2024-06-02T15:09:15.302721" elapsed="0.054464"/>
+</try>
+<status status="PASS" start="2024-06-02T15:09:15.302721" elapsed="0.054464"/>
 </kw>
-<kw name="Close the browser" owner="Genericresource" type="TEARDOWN">
+<status status="PASS" start="2024-06-02T15:09:10.576642" elapsed="4.780543"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-28T09:40:57.342935" elapsed="2.243564"/>
+<status status="PASS" start="2024-06-02T15:09:15.357185" elapsed="2.327068"/>
 </kw>
-<status status="PASS" start="2024-05-28T09:40:57.342424" elapsed="2.244075"/>
+<status status="PASS" start="2024-06-02T15:09:15.357185" elapsed="2.327594"/>
 </kw>
 <tag>Regressiontest</tag>
-<status status="PASS" start="2024-05-28T09:40:38.999873" elapsed="20.586626"/>
+<status status="PASS" start="2024-06-02T15:09:00.252705" elapsed="17.432074"/>
 </test>
-<doc>Test case for Bookmodule</doc>
-<status status="PASS" start="2024-05-28T09:40:38.558568" elapsed="21.027931"/>
+<status status="PASS" start="2024-06-02T15:08:59.796231" elapsed="17.889575"/>
 </suite>
-<status status="PASS" start="2024-05-28T09:40:38.558568" elapsed="21.029847"/>
-</suite>
-<status status="PASS" start="2024-05-28T09:40:38.525166" elapsed="21.063249"/>
+<status status="PASS" start="2024-06-02T15:08:59.764849" elapsed="17.920957"/>
 </suite>
 <statistics>
 <total>
@@ -95,9 +140,8 @@
 <stat pass="1" fail="0" skip="0">Regressiontest</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Git Own Repo">Git Own Repo</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Git Own Repo.TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestBookmoduleremovefilter">Git Own Repo.TestCase.TestBookmoduleremovefilter</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestBookmoduleremovefilter">TestCase.TestBookmoduleremovefilter</stat>
 </suite>
 </statistics>
 <errors>

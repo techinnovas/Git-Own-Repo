@@ -1,36 +1,14 @@
 ==============================================================================
-Git Own Repo                                                                  
+TestCase                                                                      
 ==============================================================================
-Git Own Repo.TestCase                                                         
+TestCase.TestBookmodulesortbyprice :: Test case for Bookmodule to verify so...
 ==============================================================================
-Git Own Repo.TestCase.TestBookmoduleshoppincart :: Test case for Bookmodule   
-==============================================================================
-To verify shopping cart option                                          
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot:14
-    T:  To verify shopping cart option    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot:16
-      To click and validate shopping cart option    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleshoppincart.robot:20
-      click on shopping cart button    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  E:\EXPLEO\Automation Project\PilotProject__DemoWebShop_Team4\Resources\bookmoduleresource.robot:52
-      Click Link    ${shopping_cardbutton_l}
-      |  ${shopping_cardbutton_l} = javascript:document.querySelector('a.ico-cart > span') (str)
-______________________________________________________________________________
-| FAIL |
-Link with locator 'javascript:document.querySelector('a.ico-cart > span')' not found.
+To verify sort the product by price                                   | PASS |
 ------------------------------------------------------------------------------
-Git Own Repo.TestCase.TestBookmoduleshoppincart :: Test case for B... | FAIL |
-1 test, 0 passed, 1 failed
+TestCase.TestBookmodulesortbyprice :: Test case for Bookmodule to ... | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Git Own Repo.TestCase                                                 | FAIL |
-1 test, 0 passed, 1 failed
-==============================================================================
-Git Own Repo                                                          | FAIL |
-1 test, 0 passed, 1 failed
+TestCase                                                              | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\6\output.xml

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T23:43:01.873990" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
+<suite id="s1-s1" name="TestBookmodulelogin" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulelogin.robot">
+<test id="s1-s1-t1" name="Login test template" line="18">
+<kw name="Open the Browser" owner="GenericResources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-02T23:43:02.297758" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-02T23:43:02.297758" elapsed="5.646359"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-02T23:43:07.944117" elapsed="0.070277"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-06-02T23:43:08.014394" elapsed="0.001312"/>
+</kw>
+<status status="PASS" start="2024-06-02T23:43:02.295753" elapsed="5.719953"/>
+</kw>
+<kw name="Login postive testcase1">
+<kw name=" Click on login element" owner="Loginresourcebook">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-02T23:43:08.018480" level="INFO">Clicking element 'xpath=//a[text()='Log in']'.</msg>
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T23:43:08.018480" elapsed="0.597998"/>
+</kw>
+<status status="PASS" start="2024-06-02T23:43:08.017021" elapsed="0.599457"/>
+</kw>
+<kw name=" Fill Login credentials" owner="Loginresourcebook">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-02T23:43:08.617483" level="INFO">Typing text '' into text field 'xpath=//input[@class='email']'.</msg>
+<arg>${email}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T23:43:08.617483" elapsed="0.098936"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-02T23:43:08.717430" level="INFO">Typing text '' into text field 'xpath=//input[@class='password']'.</msg>
+<arg>${passwords}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T23:43:08.716419" elapsed="0.107806"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-06-02T23:43:08.617483" elapsed="0.206742"/>
+</kw>
+<kw name=" Click the login button" owner="Loginresourcebook">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-02T23:43:08.826283" level="INFO">Clicking element 'xpath=//input[@class='button-1 login-button']'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-02T23:43:08.826283" elapsed="0.574518"/>
+</kw>
+<status status="PASS" start="2024-06-02T23:43:08.825751" elapsed="0.575050"/>
+</kw>
+<kw name=" Check the login page message" owner="Loginresourcebook">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-02T23:43:09.403367" level="INFO">Verifying element 'xpath=//a[text()='jsuriy@gmail.com']' contains exact text ''.</msg>
+<msg time="2024-06-02T23:43:19.632527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-02T23:43:19.633837" level="FAIL">Element with locator 'xpath=//a[text()='jsuriy@gmail.com']' not found.</msg>
+<arg>${login_msg}</arg>
+<arg>${username}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-06-02T23:43:09.403367" elapsed="10.232349">Element with locator 'xpath=//a[text()='jsuriy@gmail.com']' not found.</status>
+</kw>
+<arg>${username}</arg>
+<status status="FAIL" start="2024-06-02T23:43:09.400801" elapsed="10.234915">Element with locator 'xpath=//a[text()='jsuriy@gmail.com']' not found.</status>
+</kw>
+<kw name="To click book option" owner="bookmoduleresource">
+<status status="NOT RUN" start="2024-06-02T23:43:19.635716" elapsed="0.000000"/>
+</kw>
+<kw name="Verifiying in book page" owner="bookmoduleresource">
+<status status="NOT RUN" start="2024-06-02T23:43:19.635716" elapsed="0.000000"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2024-06-02T23:43:08.017021" elapsed="11.618695">Element with locator 'xpath=//a[text()='jsuriy@gmail.com']' not found.</status>
+</kw>
+<kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-02T23:43:19.640504" elapsed="2.323661"/>
+</kw>
+<status status="PASS" start="2024-06-02T23:43:19.640504" elapsed="2.323661"/>
+</kw>
+<status status="FAIL" start="2024-06-02T23:43:02.293459" elapsed="19.670706">Element with locator 'xpath=//a[text()='jsuriy@gmail.com']' not found.</status>
+</test>
+<doc>Test the Valid information to the login page</doc>
+<status status="FAIL" start="2024-06-02T23:43:01.914683" elapsed="20.050655"/>
+</suite>
+<status status="FAIL" start="2024-06-02T23:43:01.892411" elapsed="20.072927"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestBookmodulelogin">TestCase.TestBookmodulelogin</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-02T23:43:02.289437" level="ERROR">[ DataDriver ] Error in robot file:
+  File "E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulelogin.robot", line 0</msg>
+<msg time="2024-06-02T23:43:02.289437" level="ERROR">In source file:
+  File "../TestData/Login_Data.xlsx", line 0</msg>
+<msg time="2024-06-02T23:43:02.293459" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find E:\EXPLEO\Git Own Repo\TestCase\..\TestData\Login_Data.xlsx but file does not exist.</msg>
+</errors>
+</robot>

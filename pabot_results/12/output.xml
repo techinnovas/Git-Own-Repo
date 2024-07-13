@@ -1,73 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:09:01.514458" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T23:42:42.674979" rpa="false" schemaversion="5">
 <suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
 <suite id="s1-s1" name="TestInformationmoduleshipping" source="E:\EXPLEO\Git Own Repo\TestCase\TestInformationmoduleshipping.robot">
 <test id="s1-s1-t1" name="Verifying for shipping and return page" line="15">
 <kw name="Open the Browser" owner="GenericResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:01.844413" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<msg time="2024-06-02T23:42:42.998560" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-02T15:09:01.844413" elapsed="14.481961"/>
+<status status="PASS" start="2024-06-02T23:42:42.998560" elapsed="7.886505"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-02T15:09:16.326374" elapsed="0.048060"/>
+<status status="PASS" start="2024-06-02T23:42:50.893075" elapsed="0.168573"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-06-02T15:09:16.374434" elapsed="0.004507"/>
+<status status="PASS" start="2024-06-02T23:42:51.061648" elapsed="0.048056"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:01.844413" elapsed="14.536059"/>
+<status status="PASS" start="2024-06-02T23:42:42.995050" elapsed="8.114654"/>
 </kw>
 <kw name="To assert the shipping and return page">
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="To click on shipping option" owner="Informationmoduleresource">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:16.383300" level="INFO">Clicking link 'xpath://a[text()="Shipping &amp; Returns"]'.</msg>
+<msg time="2024-06-02T23:42:51.125739" level="INFO">Clicking link 'xpath://a[text()="Shipping &amp; Returns"]'.</msg>
+<msg time="2024-06-02T23:43:01.423947" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-02T23:43:01.424331" level="FAIL">Link with locator 'xpath://a[text()="Shipping &amp; Returns"]' not found.</msg>
 <arg>${shipping_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-02T15:09:16.382480" elapsed="1.550232"/>
+<status status="FAIL" start="2024-06-02T23:42:51.125739" elapsed="10.303641">Link with locator 'xpath://a[text()="Shipping &amp; Returns"]' not found.</status>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:16.380472" elapsed="1.552240"/>
+<status status="FAIL" start="2024-06-02T23:42:51.125739" elapsed="10.305356">Link with locator 'xpath://a[text()="Shipping &amp; Returns"]' not found.</status>
 </kw>
 <arg>Informationmoduleresource.To click on shipping option</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-06-02T15:09:16.380472" elapsed="1.552240"/>
+<status status="PASS" start="2024-06-02T23:42:51.122230" elapsed="10.308865"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
 <kw name="To verify shipping page" owner="Informationmoduleresource">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:17.932712" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Shipping &amp; Returns'.</msg>
+<msg time="2024-06-02T23:43:01.432135" level="INFO">Verifying element 'xpath://div[@class="page-title"]/h1' contains exact text 'Shipping &amp; Returns'.</msg>
+<msg time="2024-06-02T23:43:11.601640" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-02T23:43:11.601640" level="FAIL">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</msg>
 <arg>${pagetitle}</arg>
 <arg>Shipping &amp; Returns</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-06-02T15:09:17.932712" elapsed="0.030761"/>
+<status status="FAIL" start="2024-06-02T23:43:01.432135" elapsed="10.170248">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</status>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:17.932712" elapsed="0.030761"/>
+<status status="FAIL" start="2024-06-02T23:43:01.432135" elapsed="10.170248">Element with locator 'xpath://div[@class="page-title"]/h1' not found.</status>
 </kw>
 <arg>Informationmoduleresource.To verify shipping page</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2024-06-02T15:09:17.932712" elapsed="0.030761"/>
+<status status="PASS" start="2024-06-02T23:43:01.431095" elapsed="10.171288"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:16.380472" elapsed="1.583001"/>
+<status status="PASS" start="2024-06-02T23:42:51.122230" elapsed="20.480153"/>
 </kw>
 <kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-02T15:09:17.966559" elapsed="2.185239"/>
+<status status="PASS" start="2024-06-02T23:43:11.604912" elapsed="2.279235"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:17.966559" elapsed="2.185239"/>
+<status status="PASS" start="2024-06-02T23:43:11.604385" elapsed="2.279762"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-06-02T15:09:01.844413" elapsed="18.307385"/>
+<status status="PASS" start="2024-06-02T23:42:42.995050" elapsed="30.889097"/>
 </test>
 <doc>Test case to click shipping and return page</doc>
-<status status="PASS" start="2024-06-02T15:09:01.553354" elapsed="18.598444"/>
+<status status="PASS" start="2024-06-02T23:42:42.714282" elapsed="31.169865"/>
 </suite>
-<status status="PASS" start="2024-06-02T15:09:01.532558" elapsed="18.619240"/>
+<status status="PASS" start="2024-06-02T23:42:42.694513" elapsed="31.192376"/>
 </suite>
 <statistics>
 <total>

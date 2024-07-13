@@ -3,12 +3,25 @@ TestCase
 ==============================================================================
 TestCase.TestBookmodulesortbyprice :: Test case for Bookmodule to verify so...
 ==============================================================================
-To verify sort the product by price                                   | PASS |
+To verify sort the product by price                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortbyprice.robot:14
+    T:  To verify sort the product by price    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortbyprice.robot:16
+      To sort the product by low to high price option    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulesortbyprice.robot:23
+      bookmoduleresource.Assert Prices in Ascending Order    
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'bookmoduleresource.Assert Prices in Ascending Order' found.
 ------------------------------------------------------------------------------
-TestCase.TestBookmodulesortbyprice :: Test case for Bookmodule to ... | PASS |
-1 test, 1 passed, 0 failed
+TestCase.TestBookmodulesortbyprice :: Test case for Bookmodule to ... | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-TestCase                                                              | PASS |
-1 test, 1 passed, 0 failed
+TestCase                                                              | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
 Output:  E:\EXPLEO\Git Own Repo\pabot_results\6\output.xml

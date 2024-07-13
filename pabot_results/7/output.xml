@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:08:59.670396" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T23:42:41.198067" rpa="false" schemaversion="5">
 <suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
 <suite id="s1-s1" name="TestBookmoduleview" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleview.robot">
 <test id="s1-s1-t1" name="To verify view mode of product" line="14">
 <kw name="Open the Browser" owner="GenericResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:00.229523" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<msg time="2024-06-02T23:42:41.694435" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-02T15:09:00.229523" elapsed="8.887846"/>
+<status status="PASS" start="2024-06-02T23:42:41.694435" elapsed="7.366959"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-02T15:09:09.117369" elapsed="0.423979"/>
+<status status="PASS" start="2024-06-02T23:42:49.077406" elapsed="3.338072"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-06-02T15:09:09.541348" elapsed="0.048091"/>
+<status status="PASS" start="2024-06-02T23:42:52.415983" elapsed="0.010411"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:00.225895" elapsed="9.363544"/>
+<status status="PASS" start="2024-06-02T23:42:41.694435" elapsed="10.731959"/>
 </kw>
 <kw name="To verify view mode of product in list format">
 <kw name="To click book option" owner="bookmoduleresource">
 <try>
 <branch type="TRY">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:09.589439" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-06-02T23:42:52.431915" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-02T15:09:09.589439" elapsed="2.831258"/>
+<status status="PASS" start="2024-06-02T23:42:52.427899" elapsed="3.101238"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:09.589439" elapsed="2.831258"/>
+<status status="PASS" start="2024-06-02T23:42:52.427899" elapsed="3.101238"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Error clicking book option: ${book_l}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-06-02T15:09:12.420697" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:55.529137" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-06-02T15:09:12.420697" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:55.529137" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-06-02T15:09:09.589439" elapsed="2.833265"/>
+<status status="PASS" start="2024-06-02T23:42:52.427899" elapsed="3.101238"/>
 </try>
-<status status="PASS" start="2024-06-02T15:09:09.589439" elapsed="2.833265"/>
+<status status="PASS" start="2024-06-02T23:42:52.427899" elapsed="3.101238"/>
 </kw>
 <kw name="click on view option" owner="bookmoduleresource">
 <try>
 <branch type="TRY">
 <kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:12.422704" level="INFO">Selecting options from selection list 'id:products-viewmode' by index 1.</msg>
+<msg time="2024-06-02T23:42:55.529137" level="INFO">Selecting options from selection list 'id:products-viewmode' by index 1.</msg>
 <arg>${view_l}</arg>
 <arg>1</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-06-02T15:09:12.422704" elapsed="1.814683"/>
+<status status="PASS" start="2024-06-02T23:42:55.529137" elapsed="0.980541"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:12.422704" elapsed="1.814683"/>
+<status status="PASS" start="2024-06-02T23:42:55.529137" elapsed="0.980541"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Error clicking view option: ${view_l}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-06-02T15:09:14.237387" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:56.509678" elapsed="0.004895"/>
 </kw>
-<status status="NOT RUN" start="2024-06-02T15:09:14.237387" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:56.509678" elapsed="0.004895"/>
 </branch>
-<status status="PASS" start="2024-06-02T15:09:12.422704" elapsed="1.814683"/>
+<status status="PASS" start="2024-06-02T23:42:55.529137" elapsed="0.985436"/>
 </try>
-<status status="PASS" start="2024-06-02T15:09:12.422704" elapsed="1.814683"/>
+<status status="PASS" start="2024-06-02T23:42:55.529137" elapsed="0.985436"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:09.589439" elapsed="4.647948"/>
+<status status="PASS" start="2024-06-02T23:42:52.426394" elapsed="4.088179"/>
 </kw>
 <kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-02T15:09:14.241956" elapsed="4.809452"/>
+<status status="PASS" start="2024-06-02T23:42:56.514573" elapsed="2.280433"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:14.237387" elapsed="4.814021"/>
+<status status="PASS" start="2024-06-02T23:42:56.514573" elapsed="2.280433"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-06-02T15:09:00.225895" elapsed="18.825513"/>
+<status status="PASS" start="2024-06-02T23:42:41.694435" elapsed="17.100571"/>
 </test>
 <doc>Test case for Bookmodule to verify view mode of product</doc>
-<status status="PASS" start="2024-06-02T15:08:59.716041" elapsed="19.335367"/>
+<status status="PASS" start="2024-06-02T23:42:41.253125" elapsed="17.544375"/>
 </suite>
-<status status="PASS" start="2024-06-02T15:08:59.694967" elapsed="19.356441"/>
+<status status="PASS" start="2024-06-02T23:42:41.230107" elapsed="17.567393"/>
 </suite>
 <statistics>
 <total>

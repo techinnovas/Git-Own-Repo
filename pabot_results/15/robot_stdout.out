@@ -1,0 +1,35 @@
+==============================================================================
+TestCase                                                                      
+==============================================================================
+TestCase.TestBookmodulelogin :: Test the Valid information to the login page  
+==============================================================================
+Login test template                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulelogin.robot:18
+    T:  Login test template    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulelogin.robot:18
+      Login postive testcase1    ${username}    ${password}
+      |  ${username} =  (str)
+      |  ${password} =  (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\TestCase\TestBookmodulelogin.robot:27
+       Check the login page message    ${username}
+      |  ${username} =  (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  E:\EXPLEO\Git Own Repo\Resources\Loginresourcebook.robot:54
+      Element Text Should Be    ${login_msg}    ${username}
+      |  ${login_msg} = xpath=//a[text()='jsuriy@gmail.com'] (str)
+      |  ${username} =  (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath=//a[text()='jsuriy@gmail.com']' not found.
+------------------------------------------------------------------------------
+TestCase.TestBookmodulelogin :: Test the Valid information to the ... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCase                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  E:\EXPLEO\Git Own Repo\pabot_results\15\output.xml

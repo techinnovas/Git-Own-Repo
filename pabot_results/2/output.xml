@@ -1,106 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T15:08:59.664378" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-02T23:42:41.336851" rpa="false" schemaversion="5">
 <suite id="s1" name="TestCase" source="E:\EXPLEO\Git Own Repo\TestCase">
 <suite id="s1-s1" name="TestBookmoduledisplay" source="E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduledisplay.robot">
 <test id="s1-s1-t1" name="To verify display option" line="14">
 <kw name="Open the Browser" owner="GenericResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:00.199271" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<msg time="2024-06-02T23:42:42.064537" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-02T15:09:00.199271" elapsed="7.421686"/>
+<status status="PASS" start="2024-06-02T23:42:42.064537" elapsed="7.101029"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-02T15:09:07.620957" elapsed="2.552485"/>
+<status status="PASS" start="2024-06-02T23:42:49.165566" elapsed="4.594746"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-06-02T15:09:10.173442" elapsed="0.002011"/>
+<status status="PASS" start="2024-06-02T23:42:53.760312" elapsed="0.035599"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:00.199271" elapsed="9.976182"/>
+<status status="PASS" start="2024-06-02T23:42:42.064537" elapsed="11.731374"/>
 </kw>
 <kw name="To verify 4 books display by selecting 4 option in the field">
 <kw name="To click book option" owner="bookmoduleresource">
 <try>
 <branch type="TRY">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:10.175453" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
+<msg time="2024-06-02T23:42:53.799429" level="INFO">Clicking link 'xpath:(//li/a)[5]'.</msg>
 <arg>${book_l}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-02T15:09:10.175453" elapsed="1.778276"/>
+<status status="PASS" start="2024-06-02T23:42:53.799429" elapsed="1.860320"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:10.175453" elapsed="1.778276"/>
+<status status="PASS" start="2024-06-02T23:42:53.799429" elapsed="1.860320"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Error clicking book option: ${book_l}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-06-02T15:09:11.953729" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:55.659749" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-06-02T15:09:11.953729" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:55.659749" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-06-02T15:09:10.175453" elapsed="1.778276"/>
+<status status="PASS" start="2024-06-02T23:42:53.795911" elapsed="1.863838"/>
 </try>
-<status status="PASS" start="2024-06-02T15:09:10.175453" elapsed="1.778276"/>
+<status status="PASS" start="2024-06-02T23:42:53.795911" elapsed="1.869219"/>
 </kw>
 <kw name="click on display" owner="bookmoduleresource">
 <try>
 <branch type="TRY">
 <kw name="Select From List By Index" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:11.953729" level="INFO">Selecting options from selection list 'id:products-pagesize' by index 0.</msg>
+<msg time="2024-06-02T23:42:55.665130" level="INFO">Selecting options from selection list 'id:products-pagesize' by index 0.</msg>
 <arg>${display_l}</arg>
 <arg>0</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="PASS" start="2024-06-02T15:09:11.953729" elapsed="1.890182"/>
+<status status="PASS" start="2024-06-02T23:42:55.665130" elapsed="0.877556"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:11.953729" elapsed="1.890182"/>
+<status status="PASS" start="2024-06-02T23:42:55.665130" elapsed="0.877556"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Error clicking display option: ${display_l}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-06-02T15:09:13.850917" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:56.542686" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-06-02T15:09:13.850917" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-02T23:42:56.542686" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-06-02T15:09:11.953729" elapsed="1.897188"/>
+<status status="PASS" start="2024-06-02T23:42:55.665130" elapsed="0.877556"/>
 </try>
-<status status="PASS" start="2024-06-02T15:09:11.953729" elapsed="1.897188"/>
+<status status="PASS" start="2024-06-02T23:42:55.665130" elapsed="0.877556"/>
 </kw>
 <kw name="Count Products and Verify Display Limit" owner="bookmoduleresource">
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-06-02T15:09:13.931246" level="INFO">${product_count} = 4</msg>
+<msg time="2024-06-02T23:42:56.564147" level="INFO">${product_count} = 4</msg>
 <var>${product_count}</var>
 <arg>${productitle_l}</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-06-02T15:09:13.850917" elapsed="0.080329"/>
+<status status="PASS" start="2024-06-02T23:42:56.542686" elapsed="0.021461"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${product_count} &lt;= 4</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-06-02T15:09:13.931246" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-02T23:42:56.564147" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:13.850917" elapsed="0.080329"/>
+<status status="PASS" start="2024-06-02T23:42:56.542686" elapsed="0.021461"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:10.175453" elapsed="3.755793"/>
+<status status="PASS" start="2024-06-02T23:42:53.795911" elapsed="2.768236"/>
 </kw>
 <kw name="Close Browser Session" owner="GenericResources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-02T15:09:13.931246" elapsed="3.308543"/>
+<status status="PASS" start="2024-06-02T23:42:56.567312" elapsed="2.243475"/>
 </kw>
-<status status="PASS" start="2024-06-02T15:09:13.931246" elapsed="3.308543"/>
+<status status="PASS" start="2024-06-02T23:42:56.567312" elapsed="2.243475"/>
 </kw>
 <tag>smoketest</tag>
-<status status="PASS" start="2024-06-02T15:09:00.199271" elapsed="17.040518"/>
+<status status="PASS" start="2024-06-02T23:42:42.061528" elapsed="16.749259"/>
 </test>
 <doc>Test case for Bookmodule To verify 4 books display by selecting 4 option in the field</doc>
-<status status="PASS" start="2024-06-02T15:08:59.727050" elapsed="17.514262"/>
+<status status="PASS" start="2024-06-02T23:42:41.380177" elapsed="17.430610"/>
 </suite>
-<status status="PASS" start="2024-06-02T15:08:59.697473" elapsed="17.544847"/>
+<status status="PASS" start="2024-06-02T23:42:41.358113" elapsed="17.452674"/>
 </suite>
 <statistics>
 <total>

@@ -1,7 +1,7 @@
-datasources:e063c7ade7a201593399c4ca386ca6ddc6daf566
+datasources:d4dcacb8937c4280d06f318af43d424f3e1e429e
 commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
 suitesfrom:no-suites-from-option
-file:04493ecf924b17b6fde9211917548e56af033da0
+file:1a80bc911bf4679fbd72581db1fd97cf084e6471
 --test TestCase.TestBookmoduleaddtocart.To click product and select add to cart option
 --test TestCase.TestBookmoduleclickproduct.To verify product page
 --test TestCase.TestBookmoduledisplay.To verify display option
@@ -16,3 +16,5 @@ file:04493ecf924b17b6fde9211917548e56af033da0
 --test TestCase.TestInformationmoduleprivacy.Verifying for Privacy notice page
 --test TestCase.TestInformationmoduleshipping.Verifying for shipping and return page
 --test TestCase.TestInformationmodulesitemap.Verifying for site map page
+--test TestCase.TestBookmoduleclickshoppingcart.Login test template
+--test TestCase.TestBookmodulelogin.Login test template

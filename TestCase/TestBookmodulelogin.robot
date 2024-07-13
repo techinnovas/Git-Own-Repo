@@ -6,7 +6,7 @@ Resource    ../Resources/Loginresourcebook.robot
 Resource    ../Resources/bookmoduleresource.robot
 Test Setup    open the browser
 Test Teardown    close browser session
-Library    DataDriver    file=../TestData/Login_Data.xlsx     sheet_name=ValidLogin
+Library    DataDriver    file=../TestData/Login_Book_Data.xlsx     sheet_name=ValidLogin
 Test Template    Login postive testcase1
 
 *** Variables ***

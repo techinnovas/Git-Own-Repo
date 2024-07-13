@@ -1,5 +1,0 @@
-[ ERROR ] [ DataDriver ] Error in robot file:
-  File "E:\EXPLEO\Git Own Repo\TestCase\TestBookmoduleclickshoppingcart.robot", line 0
-[ ERROR ] In source file:
-  File "../TestData/Login_Data.xlsx", line 0
-[ ERROR ] Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find E:\EXPLEO\Git Own Repo\TestCase\..\TestData\Login_Data.xlsx but file does not exist.
